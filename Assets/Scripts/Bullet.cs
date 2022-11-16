@@ -52,8 +52,7 @@ public class Bullet : MonoBehaviour {
 		{
 			Damage(target);
 		}
-
-        print("hit!");
+        
 		Destroy(gameObject);
 	}
 

@@ -31,6 +31,7 @@ public class Turret : MonoBehaviour {
 
 	public Transform partToRotate;
     public Transform turretBarrel;
+    public GameObject nextStage;
 	public float turnSpeed = 10f;
     public float barrelSpeedMax = 300f;
     public float barrelAcc = 5f;

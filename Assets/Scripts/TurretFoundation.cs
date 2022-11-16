@@ -17,11 +17,28 @@ public class TurretFoundation : MonoBehaviour
         {
             // SAM, MENUS CAN GO HERE
 
-            // If E is pressed + no turret on that spot
-            if (Input.GetKeyDown(KeyCode.E) && transform.childCount == 0)
+            // Build when E is pressed
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                var builtTurret = Instantiate(turret, transform.position, transform.rotation);
-                builtTurret.transform.SetParent(transform);
+                // Build a minigun turret if not there
+                if (transform.childCount == 0) {
+                    var builtTurret = Instantiate(turret, transform.position,  transform.rotation);
+                    builtTurret.transform.SetParent(transform);
+                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                }
+
+                // Else upgrade to the next version
+                else if (transform.GetChild(0).GetComponent<Turret>().nextStage != null)
+                {
+                    var turretUpgrade = transform.GetChild(0).GetComponent<Turret>().nextStage;
+                    // Keeps the turret head facing the direction it's currently facing
+                    var turretHeadRotation = transform.GetChild(0).GetChild(0).rotation;
+                    Destroy(transform.GetChild(0).gameObject);
+                    var builtTurret = Instantiate(turretUpgrade, transform.position, transform.rotation);
+                    builtTurret.transform.GetChild(0).rotation = turretHeadRotation;
+                    builtTurret.transform.SetParent(transform);
+                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                }
             }
         }
     }
