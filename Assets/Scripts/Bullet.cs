@@ -42,6 +42,7 @@ public class Bullet : MonoBehaviour {
 	void HitTarget ()
 	{
 		GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
+		effectIns.transform.SetParent(target);
 		Destroy(effectIns, 5f);
 
 		if (explosionRadius > 0f)
