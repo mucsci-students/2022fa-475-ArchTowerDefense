@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
-  bulletPrefab: {fileID: 536968623018013185, guid: e9207edd70d37fd4e80d53e44d166685, type: 3}
+  bulletPrefab: {fileID: 185070, guid: 4ddccaf8b588b8449802a9223fee08d8, type: 3}
   fireRate: 3
   useLaser: 0
   damageOverTime: 30
@@ -221,6 +221,7 @@ MonoBehaviour:
   partToRotate: {fileID: 252130295506795385}
   turretBarrel: {fileID: 1906362095117682954}
   nextStage: {fileID: 2053722150602672185, guid: 53439d39ba744694290c1a70a6cc03a1, type: 3}
+  barrelSmoke: {fileID: 4180506975362016153, guid: b51249b47656b704384d3da81eea1ccc, type: 3}
   turnSpeed: 10
   barrelSpeedMax: 300
   barrelAcc: 5

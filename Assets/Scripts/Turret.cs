@@ -32,17 +32,18 @@ public class Turret : MonoBehaviour {
 	public Transform partToRotate;
     public Transform turretBarrel;
     public GameObject nextStage;
-	public float turnSpeed = 10f;
+    public GameObject barrelSmoke;
+    public float turnSpeed = 10f;
     public float barrelSpeedMax = 300f;
     public float barrelAcc = 5f;
-    private float barrelSpeed = 0;
+    private float barrelSpeed = 0f;
 
 	public Transform firePoint;
 
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
-	}
+    }
 	
 	void UpdateTarget ()
 	{
@@ -122,7 +123,7 @@ public class Turret : MonoBehaviour {
         if (barrelSpeed < barrelSpeedMax)
         {
             barrelSpeed += barrelAcc;
-        }
+        };
     }
 
     void DecreaseBarrelSpeed()
@@ -160,7 +161,11 @@ public class Turret : MonoBehaviour {
 		GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 		Bullet bullet = bulletGO.GetComponent<Bullet>();
 
-		if (bullet != null)
+        GameObject effectIns = Instantiate(barrelSmoke, firePoint.position, transform.rotation);
+        effectIns.transform.SetParent(transform.GetChild(0));
+        Destroy(effectIns, 5f);
+
+        if (bullet != null)
 			bullet.Seek(target);
 	}
 
