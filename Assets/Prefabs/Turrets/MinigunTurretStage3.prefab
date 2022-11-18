@@ -210,21 +210,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 15
   bulletPrefab: {fileID: 185070, guid: 4ddccaf8b588b8449802a9223fee08d8, type: 3}
-  fireRate: 10
-  useLaser: 0
-  damageOverTime: 30
-  slowAmount: 0.5
-  lineRenderer: {fileID: 0}
-  impactEffect: {fileID: 0}
-  impactLight: {fileID: 0}
-  enemyTag: Enemy
-  partToRotate: {fileID: 252130295506795385}
-  turretBarrel: {fileID: 1906362095117682954}
-  nextStage: {fileID: 0}
   barrelSmoke: {fileID: 4180506975362016153, guid: b51249b47656b704384d3da81eea1ccc, type: 3}
-  turnSpeed: 10
+  fireRate: 10
+  rotating: 1
   barrelSpeedMax: 300
   barrelAcc: 5
+  turretBarrel: {fileID: 1906362095117682954}
+  useFire: 0
+  burnVal: 1
+  flameEffect: {fileID: 0}
+  firePointLeft: {fileID: 0}
+  firePointRight: {fileID: 0}
+  useLaser: 0
+  laserDamage: 0
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  laserEffect: {fileID: 0}
+  enemyTag: Enemy
+  partToRotate: {fileID: 252130295506795385}
+  nextStage: {fileID: 0}
+  turnSpeed: 10
   firePoint: {fileID: 5302767251525127564}
 --- !u!1 &6598461689196534082
 GameObject:

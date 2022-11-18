@@ -15,6 +15,9 @@ public class Turret : MonoBehaviour {
     public GameObject barrelSmoke;
 	public float fireRate = 1f;
 	private float fireCountdown = 0f;
+
+    [Header("Rotating Barrel")]
+    public bool rotating = false;
     public float barrelSpeedMax = 300f;
     public float barrelAcc = 5f;
     private float barrelSpeed = 0f;
@@ -39,7 +42,13 @@ public class Turret : MonoBehaviour {
 	public GameObject laserEffect;
 	private GameObject laser;
 
-	[Header("Unity Setup Fields")]
+    [Header("Is Sniper")]
+    public bool isSniper = false;
+    public Transform firePointSub;
+    public Transform firePointSide1;
+    public Transform firePointSide2;
+
+    [Header("Unity Setup Fields")]
 
 	public string enemyTag = "Enemy";
 	public Transform partToRotate;
@@ -111,7 +120,7 @@ public class Turret : MonoBehaviour {
 				// }
 				laser.GetComponent<ParticleSystem>().Stop();
 			}
-			else
+			else if (rotating)
 			{
 				turretBarrel.Rotate(0f, 0f, Time.deltaTime * fireRate * barrelSpeed);
             	DecreaseBarrelSpeed();
@@ -132,14 +141,32 @@ public class Turret : MonoBehaviour {
 		}
 		else
 		{
-			if (fireCountdown <= 0f)
-			{
-				Shoot();
-				fireCountdown = 1f / fireRate;
-			}
+            if (fireCountdown <= 0f)
+            {
+                Shoot(firePoint);
+                fireCountdown = 1f / fireRate;
+
+                if (isSniper)
+                {
+                    // Sub sniper gun
+                    if (Vector3.Distance(target.position, transform.position) <= (range / 3.0f * 2.0f) && firePointSub != null)
+                    {
+                        Shoot(firePointSub);
+
+                        // Side sniper guns
+                        if (Vector3.Distance(target.position, transform.position) <= (range / 3.0f) && firePointSide1 != null)
+                        {
+                            Shoot(firePointSide1);
+                            Shoot(firePointSide2);
+                        }
+                    }
+                }
+            }
 
 			fireCountdown -= Time.deltaTime;
-        	IncreaseBarrelSpeed();
+
+            if (rotating)
+        	    IncreaseBarrelSpeed();
 		}
 
 	}
@@ -200,9 +227,9 @@ public class Turret : MonoBehaviour {
 		laser.GetComponent<ParticleSystem>().Play();
 	}
 
-	void Shoot ()
+	void Shoot (Transform firePoint)
 	{
-		GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+		GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 		Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         GameObject effectIns = Instantiate(barrelSmoke, firePoint.position, transform.rotation);
@@ -217,5 +244,11 @@ public class Turret : MonoBehaviour {
 	{
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, range);
+
+        if (isSniper)
+        {
+            Gizmos.DrawWireSphere(transform.position, range / 3.0f * 2.0f);
+            Gizmos.DrawWireSphere(transform.position, range / 3.0f);
+        }
 	}
 }
