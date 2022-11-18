@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3433222736672386022}
   - component: {fileID: -3661310059320186706}
   m_Layer: 0
-  m_Name: TestEnemy
+  m_Name: TestBigEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   startSpeed: 3
   burnRecover: 1
   speed: 0
-  startHealth: 100
+  startHealth: 300
   worth: 50
 --- !u!114 &-3433222736672386022
 MonoBehaviour:

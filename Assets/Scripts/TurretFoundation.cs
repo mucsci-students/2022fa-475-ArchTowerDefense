@@ -6,7 +6,8 @@ public class TurretFoundation : MonoBehaviour
 {
     private float buildRange = 3f;
     public GameObject player;
-    public GameObject turret;
+    public GameObject minigunTurret;
+    public GameObject flamethrowerTurret;
     
     void Update()
     {
@@ -17,12 +18,12 @@ public class TurretFoundation : MonoBehaviour
         {
             // SAM, MENUS CAN GO HERE
 
-            // Build when E is pressed
+            // Build minigun or upgrade when E is pressed
             if (Input.GetKeyDown(KeyCode.E))
             {
                 // Build a minigun turret if not there
                 if (transform.childCount == 0) {
-                    var builtTurret = Instantiate(turret, transform.position,  transform.rotation);
+                    var builtTurret = Instantiate(minigunTurret, transform.position,  transform.rotation);
                     builtTurret.transform.SetParent(transform);
                     builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
                 }
@@ -36,6 +37,17 @@ public class TurretFoundation : MonoBehaviour
                     Destroy(transform.GetChild(0).gameObject);
                     var builtTurret = Instantiate(turretUpgrade, transform.position, transform.rotation);
                     builtTurret.transform.GetChild(0).rotation = turretHeadRotation;
+                    builtTurret.transform.SetParent(transform);
+                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                }
+            }
+
+            // Build flamethrower when Q is pressed
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                // Build a flamethrower turret if not there
+                if (transform.childCount == 0) {
+                    var builtTurret = Instantiate(flamethrowerTurret, transform.position,  transform.rotation);
                     builtTurret.transform.SetParent(transform);
                     builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
                 }

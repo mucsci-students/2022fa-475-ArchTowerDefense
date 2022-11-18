@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
 	public float startSpeed = 10f;
+	public float burnRecover = 1f;
 
 	[HideInInspector]
 	public float speed;
 
 	public float startHealth = 100;
 	private float health;
+	private float burning = 0;
 
 	public int worth = 50;
 
@@ -36,6 +39,22 @@ public class Enemy : MonoBehaviour {
 		{
 			Die();
 		}
+	}
+
+	public void Burning (float heat)
+	{
+		burning += heat;
+		print("BURN DAMAGE AT " + Time.deltaTime + ": " + burning);
+		TakeDamage(burning);
+		StartCoroutine(TimeFromBurn(burning));
+	}
+
+	IEnumerator TimeFromBurn(float burnVal) {
+		yield return new WaitForSeconds(burnRecover);
+
+		// Reset burning if not being burnt
+		if (burnVal == burning)
+			burning = 0;
 	}
 
 	public void Slow (float pct)

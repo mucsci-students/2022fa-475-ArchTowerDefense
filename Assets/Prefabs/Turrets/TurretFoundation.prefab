@@ -112,4 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-  turret: {fileID: 2053722150602672185, guid: fd3dd88e985bf3249b09af29e926d0f2, type: 3}
+  minigunTurret: {fileID: 2053722150602672185, guid: fd3dd88e985bf3249b09af29e926d0f2, type: 3}
+  flamethrowerTurret: {fileID: 8969306337824291657, guid: f330fa22b7af0454e90685841610d969, type: 3}

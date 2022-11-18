@@ -12,37 +12,55 @@ public class Turret : MonoBehaviour {
 
 	[Header("Use Bullets (default)")]
 	public GameObject bulletPrefab;
+    public GameObject barrelSmoke;
 	public float fireRate = 1f;
 	private float fireCountdown = 0f;
+    public float barrelSpeedMax = 300f;
+    public float barrelAcc = 5f;
+    private float barrelSpeed = 0f;
+	public Transform firePoint;
+    public Transform turretBarrel;
 
-	[Header("Use Laser")]
-	public bool useLaser = false;
-
-	public int damageOverTime = 30;
-	public float slowAmount = .5f;
-
-	public LineRenderer lineRenderer;
-	public ParticleSystem impactEffect;
+	[Header("Use Fire")]
+	public bool useFire = false;
+	public float burnVal = 1;
+	//public LineRenderer lineRenderer;
+	public GameObject flameEffect;
 	public Light impactLight;
+	public Transform firePointLeft;
+	public Transform firePointRight;
+	private GameObject leftFire;
+	private GameObject rightFire;
+
+	// [Header("Use Laser")]
+	// public bool useLaser = false;
+
+	// public int damageOverTime = 30;
+	// public float slowAmount = .5f;
+
+	// public LineRenderer lineRenderer;
+	// public ParticleSystem impactEffect;
+	// public Light impactLight;
 
 	[Header("Unity Setup Fields")]
 
 	public string enemyTag = "Enemy";
-
 	public Transform partToRotate;
-    public Transform turretBarrel;
     public GameObject nextStage;
-    public GameObject barrelSmoke;
     public float turnSpeed = 10f;
-    public float barrelSpeedMax = 300f;
-    public float barrelAcc = 5f;
-    private float barrelSpeed = 0f;
-
-	public Transform firePoint;
 
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
+
+		if (useFire)
+		{
+			leftFire = Instantiate(flameEffect, firePointLeft.position, transform.rotation);
+        	leftFire.transform.SetParent(firePointLeft);
+
+			rightFire = Instantiate(flameEffect, firePointRight.position, transform.rotation);
+        	rightFire.transform.SetParent(firePointRight);
+		}
     }
 	
 	void UpdateTarget ()
@@ -68,36 +86,47 @@ public class Turret : MonoBehaviour {
 		{
 			target = null;
 		}
-
 	}
 
 	// Update is called once per frame
 	void Update ()
     {
-        turretBarrel.Rotate(0f, 0f, Time.deltaTime * fireRate * barrelSpeed);
         if (target == null)
         {
-            DecreaseBarrelSpeed();
-            if (useLaser)
+			if (useFire)
 			{
-				if (lineRenderer.enabled)
-				{
-					lineRenderer.enabled = false;
-					impactEffect.Stop();
-					impactLight.enabled = false;
-				}
+				leftFire.GetComponent<ParticleSystem>().Stop();
+				rightFire.GetComponent<ParticleSystem>().Stop();
+			}
+            // else if (useLaser)
+			// {
+			// 	if (lineRenderer.enabled)
+			// 	{
+			// 		lineRenderer.enabled = false;
+			// 		impactEffect.Stop();
+			// 		impactLight.enabled = false;
+			// 	}
+			// }
+			else
+			{
+				turretBarrel.Rotate(0f, 0f, Time.deltaTime * fireRate * barrelSpeed);
+            	DecreaseBarrelSpeed();
 			}
 
 			return;
 		}
 
 		LockOnTarget();
-        IncreaseBarrelSpeed();
 
-        if (useLaser)
+		if (useFire)
 		{
-			Laser();
-		} else
+			Fire();
+		}
+        // else if (useLaser)
+		// {
+		// 	Laser();
+		// }
+		else
 		{
 			if (fireCountdown <= 0f)
 			{
@@ -106,6 +135,7 @@ public class Turret : MonoBehaviour {
 			}
 
 			fireCountdown -= Time.deltaTime;
+        	IncreaseBarrelSpeed();
 		}
 
 	}
@@ -134,27 +164,34 @@ public class Turret : MonoBehaviour {
         }
     }
 
-    void Laser ()
+	void Fire ()
 	{
-		targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
-		targetEnemy.Slow(slowAmount);
-
-		if (!lineRenderer.enabled)
-		{
-			lineRenderer.enabled = true;
-			impactEffect.Play();
-			impactLight.enabled = true;
-		}
-
-		lineRenderer.SetPosition(0, firePoint.position);
-		lineRenderer.SetPosition(1, target.position);
-
-		Vector3 dir = firePoint.position - target.position;
-
-		impactEffect.transform.position = target.position + dir.normalized;
-
-		impactEffect.transform.rotation = Quaternion.LookRotation(dir);
+		targetEnemy.Burning(burnVal * Time.deltaTime * .1f);
+		leftFire.GetComponent<ParticleSystem>().Play();
+		rightFire.GetComponent<ParticleSystem>().Play();
 	}
+
+    // void Laser ()
+	// {
+	// 	targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+	// 	targetEnemy.Slow(slowAmount);
+
+	// 	if (!lineRenderer.enabled)
+	// 	{
+	// 		lineRenderer.enabled = true;
+	// 		impactEffect.Play();
+	// 		impactLight.enabled = true;
+	// 	}
+
+	// 	lineRenderer.SetPosition(0, firePoint.position);
+	// 	lineRenderer.SetPosition(1, target.position);
+
+	// 	Vector3 dir = firePoint.position - target.position;
+
+	// 	impactEffect.transform.position = target.position + dir.normalized;
+
+	// 	impactEffect.transform.rotation = Quaternion.LookRotation(dir);
+	// }
 
 	void Shoot ()
 	{
