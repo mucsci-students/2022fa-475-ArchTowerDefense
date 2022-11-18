@@ -28,6 +28,7 @@ public class GunSystem : MonoBehaviour
     public Transform attackPoint;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
+    public GameObject Gun;
 
     //  Graphics
     public CameraShake camShake;
@@ -125,6 +126,9 @@ public class GunSystem : MonoBehaviour
         GameObject impactGO = Instantiate(impactEffect, rayHit.point, Quaternion.LookRotation(rayHit.normal));
         Destroy(impactGO, 2f);
 
+        // Recoil
+        StartCoroutine(StartRecoil());
+
         bulletsLeft--;
         bulletsShot--;
 
@@ -136,5 +140,12 @@ public class GunSystem : MonoBehaviour
         {
             Invoke("Shoot", timeBetweenShots);
         }
+    }
+
+    IEnumerator StartRecoil()
+    {
+        Gun.GetComponent<Animator>().Play("Recoil");
+        yield return new WaitForSeconds(0.20f);
+        Gun.GetComponent<Animator>().Play("New State");
     }
 }

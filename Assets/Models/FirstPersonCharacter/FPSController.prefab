@@ -491,6 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1712323151}
   - component: {fileID: 1712323152}
+  - component: {fileID: 322489523}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -506,7 +507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712323150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.867241, y: -3.203083, z: -6.9662123}
+  m_LocalPosition: {x: 5.867241, y: -3.203083, z: -6.966212}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -541,12 +542,33 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 2147483647
+  Gun: {fileID: 1712323150}
   camShake: {fileID: 1907811010}
   camShakeMagnitude: 2
   camShakeDuration: 2
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
   impactEffect: {fileID: 6523915449405344066, guid: 7593818fba43c7f4c8372299ce5e893f, type: 3}
   text: {fileID: 0}
+--- !u!95 &322489523
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712323150}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75128f49358376f34a6426f31ef5186a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1843887421090765390
 GameObject:
   m_ObjectHideFlags: 0
