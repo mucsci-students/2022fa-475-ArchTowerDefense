@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour {
 
 	void Start ()
 	{
+		gameObject.layer = LayerMask.NameToLayer("Enemies");
 		speed = startSpeed;
 		health = startHealth;
 	}

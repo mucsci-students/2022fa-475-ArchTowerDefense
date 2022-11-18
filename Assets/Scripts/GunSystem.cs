@@ -30,11 +30,12 @@ public class GunSystem : MonoBehaviour
     public LayerMask whatIsEnemy;
 
     //  Graphics
-
     public CameraShake camShake;
     public float camShakeMagnitude,
         camShakeDuration;
     public GameObject muzzleFlash;
+    public GameObject impactEffect;
+
     public TextMeshProUGUI text;
 
     private void Awake()
@@ -120,6 +121,9 @@ public class GunSystem : MonoBehaviour
 
         // Graphics
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        
+        GameObject impactGO = Instantiate(impactEffect, rayHit.point, Quaternion.LookRotation(rayHit.normal));
+        Destroy(impactGO, 2f);
 
         bulletsLeft--;
         bulletsShot--;
