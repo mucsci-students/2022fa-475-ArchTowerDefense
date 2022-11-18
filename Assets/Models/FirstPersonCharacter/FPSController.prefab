@@ -261,7 +261,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1600273c69393cd40b237c5128f1fb03, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e67fc418789878e88855e941ce9fcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &367897217
@@ -524,27 +524,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712323150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363a398e7b0984e458f18aa7e239db36, type: 3}
+  m_Script: {fileID: 11500000, guid: 70188d5ac967f4985ae5d0ae33ce28c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 20
   timeBetweenShooting: 0.05
   spread: 0.05
-  range: 100
+  range: 300
   reloadTime: 1
   timeBetweenShots: 0
-  magazineSize: 10
+  magazineSize: 20
   bulletsPerTap: 1
   allowButtonHold: 0
   cam: {fileID: 2000000}
   attackPoint: {fileID: 1029245522021568334}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2147483647
   camShake: {fileID: 1907811010}
-  camShakeMagnitude: 0.1
-  camShakeDuration: 0.1
-  muzzleFlash: {fileID: 1198663731479534, guid: b46264f9e12caed4cb53e7c2ad64aa54, type: 3}
+  camShakeMagnitude: 2
+  camShakeDuration: 2
+  muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
+  impactEffect: {fileID: 6523915449405344066, guid: 7593818fba43c7f4c8372299ce5e893f, type: 3}
   text: {fileID: 0}
 --- !u!1 &1843887421090765390
 GameObject:
