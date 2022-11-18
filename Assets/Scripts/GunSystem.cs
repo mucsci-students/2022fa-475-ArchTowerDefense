@@ -121,7 +121,8 @@ public class GunSystem : MonoBehaviour
         camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         // Graphics
-        Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        GameObject muzzFlash = (GameObject)Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        muzzFlash.transform.parent = Gun.transform;
         
         GameObject impactGO = Instantiate(impactEffect, rayHit.point, Quaternion.LookRotation(rayHit.normal));
         Destroy(impactGO, 2f);
