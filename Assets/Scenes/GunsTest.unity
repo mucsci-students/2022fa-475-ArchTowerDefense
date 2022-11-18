@@ -2251,10 +2251,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  timeBetweenShooting: 1
-  spread: 0
-  range: 0
-  reloadTime: 4
+  timeBetweenShooting: 0.05
+  spread: 0.05
+  range: 100
+  reloadTime: 1
   timeBetweenShots: 0
   magazineSize: 10
   bulletsPerTap: 1
@@ -2265,8 +2265,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   camShake: {fileID: 1907811010}
-  camShakeMagnitude: 5
-  camShakeDuration: 0.5
+  camShakeMagnitude: 0.1
+  camShakeDuration: 0.1
   muzzleFlash: {fileID: 1198663731479534, guid: b46264f9e12caed4cb53e7c2ad64aa54, type: 3}
   text: {fileID: 284443017}
 --- !u!1 &1750368080
