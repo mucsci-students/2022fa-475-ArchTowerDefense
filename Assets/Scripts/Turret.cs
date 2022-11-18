@@ -167,6 +167,8 @@ public class Turret : MonoBehaviour {
 	void Fire ()
 	{
 		targetEnemy.Burning(burnVal * Time.deltaTime * .1f);
+		leftFire.transform.rotation = transform.GetChild(0).rotation;
+		rightFire.transform.rotation = transform.GetChild(0).rotation;
 		leftFire.GetComponent<ParticleSystem>().Play();
 		rightFire.GetComponent<ParticleSystem>().Play();
 	}
