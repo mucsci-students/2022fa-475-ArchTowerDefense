@@ -151,13 +151,13 @@ public class Turret : MonoBehaviour {
                     // Sub sniper gun
                     if (Vector3.Distance(target.position, transform.position) <= (range / 3.0f * 2.0f) && firePointSub != null)
                     {
-                        Shoot(firePointSub);
+                        StartCoroutine(DelayShot(firePointSub, fireCountdown / 4.0f));
 
                         // Side sniper guns
                         if (Vector3.Distance(target.position, transform.position) <= (range / 3.0f) && firePointSide1 != null)
                         {
-                            Shoot(firePointSide1);
-                            Shoot(firePointSide2);
+                            StartCoroutine(DelayShot(firePointSide1, fireCountdown / 2.0f));
+                            StartCoroutine(DelayShot(firePointSide2, fireCountdown / 4.0f * 3.0f));
                         }
                     }
                 }
@@ -239,6 +239,12 @@ public class Turret : MonoBehaviour {
         if (bullet != null)
 			bullet.Seek(target);
 	}
+
+    IEnumerator DelayShot(Transform firePoint, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        Shoot(firePoint);
+    }
 
 	void OnDrawGizmosSelected ()
 	{
