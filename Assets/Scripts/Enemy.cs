@@ -45,7 +45,6 @@ public class Enemy : MonoBehaviour {
 	public void Burning (float heat)
 	{
 		burning += heat;
-		print("BURN DAMAGE AT " + Time.deltaTime + ": " + burning);
 		TakeDamage(burning);
 		StartCoroutine(TimeFromBurn(burning));
 	}
@@ -60,7 +59,8 @@ public class Enemy : MonoBehaviour {
 
 	public void Slow (float pct)
 	{
-		speed = startSpeed * (1f - pct);
+		if (speed > 0.5f)
+			speed = startSpeed * (1f - pct);
 	}
 
 	void Die ()

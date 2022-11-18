@@ -8,6 +8,7 @@ public class TurretFoundation : MonoBehaviour
     public GameObject player;
     public GameObject minigunTurret;
     public GameObject flamethrowerTurret;
+    public GameObject slowdownTurret;
     
     void Update()
     {
@@ -48,6 +49,17 @@ public class TurretFoundation : MonoBehaviour
                 // Build a flamethrower turret if not there
                 if (transform.childCount == 0) {
                     var builtTurret = Instantiate(flamethrowerTurret, transform.position,  transform.rotation);
+                    builtTurret.transform.SetParent(transform);
+                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                }
+            }
+
+            // Build slowdown when Q is pressed
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                // Build a slowdown turret if not there
+                if (transform.childCount == 0) {
+                    var builtTurret = Instantiate(slowdownTurret, transform.position,  transform.rotation);
                     builtTurret.transform.SetParent(transform);
                     builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
                 }

@@ -18,29 +18,26 @@ public class Turret : MonoBehaviour {
     public float barrelSpeedMax = 300f;
     public float barrelAcc = 5f;
     private float barrelSpeed = 0f;
-	public Transform firePoint;
     public Transform turretBarrel;
 
 	[Header("Use Fire")]
 	public bool useFire = false;
 	public float burnVal = 1;
-	//public LineRenderer lineRenderer;
 	public GameObject flameEffect;
-	public Light impactLight;
 	public Transform firePointLeft;
 	public Transform firePointRight;
 	private GameObject leftFire;
 	private GameObject rightFire;
 
-	// [Header("Use Laser")]
-	// public bool useLaser = false;
+	[Header("Use Laser")]
+	public bool useLaser = false;
 
-	// public int damageOverTime = 30;
-	// public float slowAmount = .5f;
+	public int laserDamage = 0;
+	public float slowAmount = .5f;
 
-	// public LineRenderer lineRenderer;
-	// public ParticleSystem impactEffect;
-	// public Light impactLight;
+	public LineRenderer lineRenderer;
+	public GameObject laserEffect;
+	private GameObject laser;
 
 	[Header("Unity Setup Fields")]
 
@@ -48,6 +45,7 @@ public class Turret : MonoBehaviour {
 	public Transform partToRotate;
     public GameObject nextStage;
     public float turnSpeed = 10f;
+	public Transform firePoint;
 
 	// Use this for initialization
 	void Start () {
@@ -60,6 +58,12 @@ public class Turret : MonoBehaviour {
 
 			rightFire = Instantiate(flameEffect, firePointRight.position, transform.rotation);
         	rightFire.transform.SetParent(firePointRight);
+		}
+
+		if (useLaser)
+		{
+			laser = Instantiate(laserEffect, firePoint.position, transform.rotation);
+        	laser.transform.SetParent(firePoint);
 		}
     }
 	
@@ -98,15 +102,15 @@ public class Turret : MonoBehaviour {
 				leftFire.GetComponent<ParticleSystem>().Stop();
 				rightFire.GetComponent<ParticleSystem>().Stop();
 			}
-            // else if (useLaser)
-			// {
-			// 	if (lineRenderer.enabled)
-			// 	{
-			// 		lineRenderer.enabled = false;
-			// 		impactEffect.Stop();
-			// 		impactLight.enabled = false;
-			// 	}
-			// }
+            else if (useLaser)
+			{
+				// if (lineRenderer.enabled)
+				// {
+				// 	lineRenderer.enabled = false;
+				//	laser.GetComponent<ParticleSystem>().Stop();
+				// }
+				laser.GetComponent<ParticleSystem>().Stop();
+			}
 			else
 			{
 				turretBarrel.Rotate(0f, 0f, Time.deltaTime * fireRate * barrelSpeed);
@@ -122,10 +126,10 @@ public class Turret : MonoBehaviour {
 		{
 			Fire();
 		}
-        // else if (useLaser)
-		// {
-		// 	Laser();
-		// }
+        else if (useLaser)
+		{
+			Laser();
+		}
 		else
 		{
 			if (fireCountdown <= 0f)
@@ -173,27 +177,28 @@ public class Turret : MonoBehaviour {
 		rightFire.GetComponent<ParticleSystem>().Play();
 	}
 
-    // void Laser ()
-	// {
-	// 	targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
-	// 	targetEnemy.Slow(slowAmount);
+    void Laser ()
+	{
+		targetEnemy.TakeDamage(laserDamage * Time.deltaTime);
+		targetEnemy.Slow(slowAmount);
 
-	// 	if (!lineRenderer.enabled)
-	// 	{
-	// 		lineRenderer.enabled = true;
-	// 		impactEffect.Play();
-	// 		impactLight.enabled = true;
-	// 	}
+		// if (!lineRenderer.enabled)
+		// {
+		// 	lineRenderer.enabled = true;
+		// 	impactEffect.Play();
+		// 	impactLight.enabled = true;
+		// }
 
-	// 	lineRenderer.SetPosition(0, firePoint.position);
-	// 	lineRenderer.SetPosition(1, target.position);
+		// lineRenderer.SetPosition(0, firePoint.position);
+		// lineRenderer.SetPosition(1, target.position);
 
-	// 	Vector3 dir = firePoint.position - target.position;
+		// Vector3 dir = firePoint.position - target.position;
 
-	// 	impactEffect.transform.position = target.position + dir.normalized;
-
-	// 	impactEffect.transform.rotation = Quaternion.LookRotation(dir);
-	// }
+		// laser.transform.position = target.position + dir.normalized;
+		// laser.transform.rotation = Quaternion.LookRotation(dir);
+		laser.transform.rotation = transform.GetChild(0).rotation;
+		laser.GetComponent<ParticleSystem>().Play();
+	}
 
 	void Shoot ()
 	{
