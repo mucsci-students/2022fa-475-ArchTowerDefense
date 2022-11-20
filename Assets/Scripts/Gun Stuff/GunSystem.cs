@@ -31,9 +31,6 @@ public class GunSystem : MonoBehaviour
     public GameObject Gun;
 
     //  Graphics
-    public CameraShake camShake;
-    public float camShakeMagnitude,
-        camShakeDuration;
     public GameObject muzzleFlash;
     public GameObject impactEffect;
 
@@ -117,8 +114,6 @@ public class GunSystem : MonoBehaviour
                 rayHit.collider.GetComponent<Enemy>().TakeDamage(damage);
         }
 
-        // Shake Camera
-        camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         // Graphics
         GameObject muzzFlash = (GameObject)Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
