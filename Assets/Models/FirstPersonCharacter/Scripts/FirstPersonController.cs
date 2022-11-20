@@ -32,6 +32,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float currentFOV = 60f;
         public float aimingSpeed = 10f;
 
+        // Weapon sway and bob
+        public WeaponSway weaponSwayAndBobScript;
+
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -63,6 +66,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            float speed;
+            GetInput(out speed);
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -115,6 +120,28 @@ namespace UnityStandardAssets.Characters.FirstPerson
                         crosshairImage.color = new Color(0.8f, 0.8f, 0.8f, 1f);
                     }
                 }
+            }
+            
+            weaponSwayAndBobScript.currentSpeed = AllowWeaponSway() ? m_CharacterController.velocity.magnitude : 0;
+        }
+
+        private bool AllowWeaponSway()
+        {
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 )
+            {
+                Debug.Log(m_Jumping);
+                if (!m_Jumping)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
             }
         }
 

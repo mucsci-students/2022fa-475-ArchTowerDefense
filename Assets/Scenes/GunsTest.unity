@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: crosshairImages.Array.data[4]
       value: 
       objectReference: {fileID: 225639812}
+    - target: {fileID: 367897217, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712323152, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: text
       value: 
