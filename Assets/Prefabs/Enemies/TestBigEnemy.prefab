@@ -117,6 +117,8 @@ MonoBehaviour:
   speed: 0
   startHealth: 300
   worth: 50
+  healthBar: {fileID: 4283088553834733305, guid: b83b861f02d4b2a4782843337ef173dc, type: 3}
+  healthOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &-3433222736672386022
 MonoBehaviour:
   m_ObjectHideFlags: 0

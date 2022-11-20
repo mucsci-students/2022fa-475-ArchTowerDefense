@@ -127,21 +127,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private bool AllowWeaponSway()
         {
-            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 )
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0 )
             {
                 if (!m_Jumping)
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
         private void PlayLandingSound()
