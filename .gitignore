@@ -23,6 +23,7 @@
 /[Aa]ssets/*.meta
 /[Aa]ssets/*/*.meta
 /[Aa]ssets/Scripts/*.cs.meta
+/[Aa]ssets/Prefabs/*/*.prefab.meta
 
 .vscode/*
 
