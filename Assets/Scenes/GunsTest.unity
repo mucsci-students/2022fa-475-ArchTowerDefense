@@ -263,9 +263,53 @@ PrefabInstance:
       propertyPath: crosshairImages.Array.data[4]
       value: 
       objectReference: {fileID: 225639812}
+    - target: {fileID: 322489523, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322489523, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 367897217, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: maxSway
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: minSway
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: swayIntensityX
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: swayIntensityY
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: bobOverrides.Array.data[0].intensityY
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: bobOverrides.Array.data[1].intensityX
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: bobOverrides.Array.data[1].intensityY
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: bobOverrides.Array.data[2].intensityY
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331445791, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: bobOverrides.Array.data[2].bobX.m_PreInfinity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1712323152, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: text

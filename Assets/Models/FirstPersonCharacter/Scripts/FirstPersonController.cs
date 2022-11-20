@@ -129,7 +129,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 )
             {
-                Debug.Log(m_Jumping);
                 if (!m_Jumping)
                 {
                     return true;
