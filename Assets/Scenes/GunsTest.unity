@@ -1414,19 +1414,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 6239162815534839863, guid: 755f3bd37cb0ad94eb2f5050b9c51b22, type: 3}
+  - enemy: {fileID: 6239162815534839863, guid: 550689ea31ec55146895cb17e106200c, type: 3}
     count: 1
     rate: 2
-  - enemy: {fileID: 6239162815534839863, guid: 755f3bd37cb0ad94eb2f5050b9c51b22, type: 3}
+  - enemy: {fileID: 6239162815534839863, guid: 550689ea31ec55146895cb17e106200c, type: 3}
     count: 2
     rate: 2
-  - enemy: {fileID: 6239162815534839863, guid: 755f3bd37cb0ad94eb2f5050b9c51b22, type: 3}
+  - enemy: {fileID: 6239162815534839863, guid: 550689ea31ec55146895cb17e106200c, type: 3}
     count: 3
     rate: 2
-  - enemy: {fileID: 6239162815534839863, guid: 755f3bd37cb0ad94eb2f5050b9c51b22, type: 3}
+  - enemy: {fileID: 6239162815534839863, guid: 550689ea31ec55146895cb17e106200c, type: 3}
     count: 5
     rate: 2
-  - enemy: {fileID: 6239162815534839863, guid: 755f3bd37cb0ad94eb2f5050b9c51b22, type: 3}
+  - enemy: {fileID: 6239162815534839863, guid: 550689ea31ec55146895cb17e106200c, type: 3}
     count: 8
     rate: 2
   spawnPoint: {fileID: 546275065}
