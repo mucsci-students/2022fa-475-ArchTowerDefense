@@ -66,16 +66,24 @@ public class Bullet : MonoBehaviour {
 			{
 				Damage(collider.transform);
 			}
+			else if(collider.tag == "Arch")
+			{
+				Damage(collider.transform);
+			}
 		}
 	}
 
 	void Damage (Transform enemy)
 	{
 		Enemy e = enemy.GetComponent<Enemy>();
-
+		Arch a = enemy.GetComponent<Arch>();
 		if (e != null)
 		{
 			e.TakeDamage(damage);
+		}
+		if(a != null)
+		{
+			a.TakeDamage(damage);
 		}
 	}
 
