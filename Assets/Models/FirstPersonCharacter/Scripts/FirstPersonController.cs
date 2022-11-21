@@ -122,7 +122,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
             
-            weaponSwayAndBobScript.currentSpeed = AllowWeaponSway() ? m_CharacterController.velocity.magnitude : 0;
         }
 
         private bool AllowWeaponSway()
