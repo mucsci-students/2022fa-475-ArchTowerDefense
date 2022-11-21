@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &58686901 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4283088553834733305, guid: b83b861f02d4b2a4782843337ef173dc, type: 3}
-  m_PrefabInstance: {fileID: 2037881899}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &116496336
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +220,7 @@ RectTransform:
   - {fileID: 991749981}
   - {fileID: 1692911577}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -441,7 +436,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671689034
 GameObject:
@@ -611,7 +606,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &991749980
 GameObject:
@@ -710,7 +705,7 @@ TerrainCollider:
   m_GameObject: {fileID: 994106303}
   m_Material: {fileID: 0}
   m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: 630e84de64db2e19eb70e9a810836afb, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 1d768eea95025badd907f2d9ca8c37d2, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &994106305
 Terrain:
@@ -721,7 +716,7 @@ Terrain:
   m_GameObject: {fileID: 994106303}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 630e84de64db2e19eb70e9a810836afb, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 1d768eea95025badd907f2d9ca8c37d2, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -759,7 +754,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042686299
 GameObject:
@@ -909,7 +904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -951,38 +946,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: crosshair
-      value: 
-      objectReference: {fileID: 991749980}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: crosshairImages.Array.data[0]
-      value: 
-      objectReference: {fileID: 1921706438}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: crosshairImages.Array.data[1]
-      value: 
-      objectReference: {fileID: 1692911578}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: crosshairImages.Array.data[2]
-      value: 
-      objectReference: {fileID: 2026876444}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: crosshairImages.Array.data[3]
-      value: 
-      objectReference: {fileID: 1944849740}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: crosshairImages.Array.data[4]
-      value: 
-      objectReference: {fileID: 671689036}
-    - target: {fileID: 322489523, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 0c7b75c66b49d02c58b7bd04299901d8, type: 2}
-    - target: {fileID: 1712323152, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 1042686301}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &1615788629 stripped
@@ -1643,9 +1606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287ee2be6dad6f9c4a4e8db87ff985a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 100
-  healthBar: {fileID: 58686901}
-  healthOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &8721291001018196770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4049086117460268150, guid: c82f792290c8d7440bfe5908ea98ec93, type: 3}
