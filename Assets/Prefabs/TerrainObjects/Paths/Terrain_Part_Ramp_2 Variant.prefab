@@ -58,6 +58,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e9bc0a18e06bd10479c7042259f33e20, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.68856
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9bc0a18e06bd10479c7042259f33e20, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.96244
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9bc0a18e06bd10479c7042259f33e20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 294.86105
       objectReference: {fileID: 0}
@@ -99,7 +107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e9bc0a18e06bd10479c7042259f33e20, type: 3}
       propertyPath: m_Name
-      value: Terrain_Part_Ramp_2
+      value: Terrain_Part_Ramp_2 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9bc0a18e06bd10479c7042259f33e20, type: 3}
