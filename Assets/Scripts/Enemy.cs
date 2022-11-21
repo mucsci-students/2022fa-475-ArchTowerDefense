@@ -2,8 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
-
+public class Enemy : MonoBehaviour
+{
+    private Camera cam;
 	public float startSpeed = 10f;
 	public float burnRecover = 1f;
 
@@ -19,18 +20,43 @@ public class Enemy : MonoBehaviour {
 	//public GameObject deathEffect;
 
 	[Header("Unity Stuff")]
-	//public Image healthBar;
+    public GameObject healthBar;
+    public Vector3 healthOffset;
 
-	private bool isDead = false;
+    private bool isDead = false;
 
 	void Start ()
 	{
+        cam = Camera.main;
+
 		gameObject.layer = LayerMask.NameToLayer("Enemies");
 		speed = startSpeed;
 		health = startHealth;
 	}
 
-	public void TakeDamage (float amount)
+    void Update()
+    {
+        // Hides health bar if enemy is behind the player
+        Vector3 visiblePos = cam.WorldToViewportPoint(transform.position);
+        if (visiblePos.z >= 0)
+        {
+            healthBar.SetActive(true);
+        }
+        else
+        {
+            healthBar.SetActive(false);
+        }
+
+        if (healthBar.activeSelf)
+        {
+            Vector3 pos = cam.WorldToScreenPoint(transform.position + healthOffset);
+            healthBar.transform.position = pos;
+
+            healthBar.GetComponent<Slider>().value = health / startHealth;
+        }
+    }
+
+    public void TakeDamage (float amount)
 	{
 		health -= amount;
 
@@ -45,7 +71,6 @@ public class Enemy : MonoBehaviour {
 	public void Burning (float heat)
 	{
 		burning += heat;
-		print("BURN DAMAGE AT " + Time.deltaTime + ": " + burning);
 		TakeDamage(burning);
 		StartCoroutine(TimeFromBurn(burning));
 	}
@@ -60,7 +85,8 @@ public class Enemy : MonoBehaviour {
 
 	public void Slow (float pct)
 	{
-		speed = startSpeed * (1f - pct);
+		if (speed > 0.5f)
+			speed = startSpeed * (1f - pct);
 	}
 
 	void Die ()
@@ -77,4 +103,15 @@ public class Enemy : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
+    //private void OnBecameVisible()
+    //{
+    //    print("can see!");
+    //    healthBar.SetActive(true);
+    //}
+
+    //private void OnBecameInvisible()
+    //{
+    //    print("cant see!");
+    //    healthBar.SetActive(false);
+    //}
 }

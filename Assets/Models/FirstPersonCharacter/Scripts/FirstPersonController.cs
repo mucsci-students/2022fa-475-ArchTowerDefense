@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 //using UnityStandardAssets.CrossPlatformInput;
 //using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -22,6 +23,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
+        // Crosshair and aiming things
+        [SerializeField] private GameObject crosshair;
+        public Image[] crosshairImages;
+        public float regularFOV = 60f;
+        public float aimingFOV = 50f;
+        public float currentFOV = 60f;
+        public float aimingSpeed = 10f;
+
+        // Weapon sway and bob
+        public WeaponSway weaponSwayAndBobScript;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -54,6 +66,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            float speed;
+            GetInput(out speed);
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -73,8 +87,55 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+
+            // Crosshair and aiming stuff FOV
+            if (crosshair.GetComponent<CrossHair>().Aiming)
+            {
+                currentFOV = Mathf.Lerp(currentFOV, aimingFOV, Time.deltaTime * aimingSpeed);
+            }
+            else
+            {
+                currentFOV = Mathf.Lerp(currentFOV, regularFOV, Time.deltaTime * aimingSpeed);
+            }
+
+            m_Camera.fieldOfView = currentFOV;
+
+
+            // Changing the color of the crosshair when aiming at enemies
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 300f))
+            {
+                if (hit.transform.gameObject.CompareTag("Enemy"))
+                {
+                    foreach(Image crosshairImage in crosshairImages)
+                    {
+                        crosshairImage.color = new Color(1f, 0f, 0f, 1f);
+                    }
+                }
+                else
+                {
+                    foreach(Image crosshairImage in crosshairImages)
+                    {
+                        crosshairImage.color = new Color(0.8f, 0.8f, 0.8f, 1f);
+                    }
+                }
+            }
+            
+            weaponSwayAndBobScript.currentSpeed = AllowWeaponSway() ? m_CharacterController.velocity.magnitude : 0;
         }
 
+        private bool AllowWeaponSway()
+        {
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0 )
+            {
+                if (!m_Jumping)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         private void PlayLandingSound()
         {
