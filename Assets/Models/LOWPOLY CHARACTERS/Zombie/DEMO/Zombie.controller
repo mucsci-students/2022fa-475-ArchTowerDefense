@@ -24,12 +24,12 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
 --- !u!1102 &1102356427292891930
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Zombie_Rig|Zombie_Attack
+  m_Name: Zombie_Rig|Zombie_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -42,7 +42,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ba3acdea5ad2bb048b6671d2ac58c07f, type: 3}
+  m_Motion: {fileID: 7400000, guid: 7461e780d2bed5342a2242743e618f5f, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -50,7 +50,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102576301606497588
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -76,7 +76,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102687234754504572
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,12 +102,12 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102776979374684790
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Zombie_Rig|Zombie_Walk
+  m_Name: Zombie_Rig|Zombie_Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -128,7 +128,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102916357647361548
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -154,7 +154,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1107 &1107203828257001576
 AnimatorStateMachine:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -172,7 +172,7 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: 192, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102776979374684790}
-    m_Position: {x: 336, y: 276, z: 0}
+    m_Position: {x: 140, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102687234754504572}
     m_Position: {x: 371, y: 341, z: 0}

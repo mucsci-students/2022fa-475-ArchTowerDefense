@@ -26,6 +26,7 @@ public class EnemyMovement : MonoBehaviour {
 			GetNextWaypoint();
 		}
 
+		transform.rotation = Quaternion.LookRotation (dir);
 		enemy.speed = enemy.startSpeed;
 	}
 
