@@ -32,9 +32,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float currentFOV = 60f;
         public float aimingSpeed = 10f;
 
-        // Weapon sway and bob
-        public WeaponSway weaponSwayAndBobScript;
-
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
