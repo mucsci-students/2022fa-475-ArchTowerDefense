@@ -2102,10 +2102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69892bf317855c4b83fc07ba19c4d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 3
+  startSpeed: 2
   burnRecover: 1
   speed: 0
-  startHealth: 100
+  startHealth: 500
   worth: 50
   healthBar: {fileID: 5679658313294252575}
   healthOffset: {x: 0, y: 1, z: 0}
