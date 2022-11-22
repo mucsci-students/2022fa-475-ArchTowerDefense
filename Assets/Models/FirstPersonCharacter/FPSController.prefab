@@ -101,7 +101,6 @@ MonoBehaviour:
   aimingFOV: 50
   currentFOV: 70
   aimingSpeed: 10
-  weaponSwayAndBobScript: {fileID: 0}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 0
