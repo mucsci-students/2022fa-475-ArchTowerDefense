@@ -2107,8 +2107,9 @@ MonoBehaviour:
   speed: 0
   startHealth: 500
   worth: 50
+  deathEffect: {fileID: 6101287044835023169, guid: 7cfac387b43c1a2419de780520b67cac, type: 3}
   healthBar: {fileID: 5679658313294252575}
-  healthOffset: {x: 0, y: 1, z: 0}
+  healthOffset: {x: 0, y: 2, z: 0}
 --- !u!114 &4422952098151449649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2131,10 +2132,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.20033869
-  m_Height: 1.8064926
+  m_Radius: 0.20033868
+  m_Height: 1.7800655
   m_Direction: 1
-  m_Center: {x: -0.0032571852, y: 0.8911468, z: -0.022800326}
+  m_Center: {x: -0.0032571952, y: 0.8977537, z: -0.022800326}
 --- !u!54 &8988512157423460139
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     private Camera cam;
+	private Animator anim;
 	public float startSpeed = 10f;
 	public float burnRecover = 1f;
 
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour
 
 	public int worth = 50;
 
-	//public GameObject deathEffect;
+	public GameObject deathEffect;
 
 	[Header("Unity Stuff")]
     public GameObject healthBar;
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour
 	void Start ()
 	{
         cam = Camera.main;
+		anim = GetComponent<Animator>();
 
 		gameObject.layer = LayerMask.NameToLayer("Enemies");
 		speed = startSpeed;
@@ -37,23 +39,26 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         // Hides health bar if enemy is behind the player
-        Vector3 visiblePos = cam.WorldToViewportPoint(transform.position);
-        if (visiblePos.z >= 0)
-        {
-            healthBar.SetActive(true);
-        }
-        else
-        {
-            healthBar.SetActive(false);
-        }
+       if (!isDead)
+	   {
+			Vector3 visiblePos = cam.WorldToViewportPoint(transform.position);
+			if (visiblePos.z >= 0)
+			{
+				healthBar.SetActive(true);
+			}
+			else
+			{
+				healthBar.SetActive(false);
+			}
 
-        if (healthBar.activeSelf)
-        {
-            Vector3 pos = cam.WorldToScreenPoint(transform.position + healthOffset);
-            healthBar.transform.position = pos;
+			if (healthBar.activeSelf)
+			{
+				Vector3 pos = cam.WorldToScreenPoint(transform.position + healthOffset);
+				healthBar.transform.position = pos;
 
-            healthBar.GetComponent<Slider>().value = health / startHealth;
-        }
+				healthBar.GetComponent<Slider>().value = health / startHealth;
+			}
+	   }
     }
 
     public void TakeDamage (float amount)
@@ -92,14 +97,23 @@ public class Enemy : MonoBehaviour
 	void Die ()
 	{
 		isDead = true;
+		healthBar.SetActive(false);
+		gameObject.tag = "Dead";
+		GetComponent<CapsuleCollider>().isTrigger = true;
+		GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
 		PlayerStats.Money += worth;
 
-		//GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
-		//Destroy(effect, 5f);
-
 		--WaveSpawner.EnemiesAlive;
+		anim.SetTrigger("dead");
+		StartCoroutine(Disintegrate());
+	}
 
+	IEnumerator Disintegrate()
+	{
+		yield return new WaitForSeconds(1f);
+		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+		Destroy(effect, 5f);
 		Destroy(gameObject);
 	}
 
