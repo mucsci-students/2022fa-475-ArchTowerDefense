@@ -46,8 +46,17 @@ public class GunSystem : MonoBehaviour
     {
         MyInput();
 
+        if(bulletsLeft < 6)
+        {
+            text.color = new Color(.698f, .133f, .133f, 1.0f);
+        }
+        else
+        {
+            text.color = new Color(1f, 1f, 1f, 1f);
+        }
         // update bullet num
         text.SetText(bulletsLeft + " / " + magazineSize);
+
     }
 
     private void MyInput()
