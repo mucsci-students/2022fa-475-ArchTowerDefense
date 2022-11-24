@@ -59,8 +59,14 @@ public class EnemyMovement : MonoBehaviour {
 
 		GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
-		GetComponent<Animator>().SetTrigger("attack");
-		//Destroy(gameObject);
+		if (transform.Find("Bomb"))
+		{
+			GameObject effect = Instantiate(GetComponent<Enemy>().deathEffect, transform.position, Quaternion.identity);
+			Destroy(effect, 5f);
+			Destroy(gameObject);
+		}
+		else
+			GetComponent<Animator>().SetTrigger("attack");
 	}
 
 }

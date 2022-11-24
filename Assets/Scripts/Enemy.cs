@@ -106,13 +106,21 @@ public class Enemy : MonoBehaviour
 
 		--WaveSpawner.EnemiesAlive;
 		anim.SetTrigger("dead");
-		StartCoroutine(Disintegrate());
+
+		if (transform.Find("Bomb"))
+		{
+			GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+			Destroy(effect, 5f);
+			Destroy(gameObject);
+		}
+		else
+			StartCoroutine(Disintegrate());
 	}
 
 	IEnumerator Disintegrate()
 	{
 		yield return new WaitForSeconds(1f);
-		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+		GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(effect, 5f);
 		Destroy(gameObject);
 	}
