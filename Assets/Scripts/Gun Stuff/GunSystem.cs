@@ -149,8 +149,14 @@ public class GunSystem : MonoBehaviour
 
     IEnumerator StartRecoil()
     {
-        Gun.GetComponent<Animator>().Play("Recoil");
-        yield return new WaitForSeconds(0.20f);
-        Gun.GetComponent<Animator>().Play("New State");
+        Debug.Log(Gun.name + " recoil");
+        if(Gun.name == "procrastinator")
+        {
+            // Gun.GetComponent<Animator>().Play("Recoil");
+            Gun.GetComponent<Animator>().Play("Procrastinator.Shoot");
+            // yield return new WaitForSeconds(0.20f);
+            yield return new WaitForSeconds(1.10f);
+            Gun.GetComponent<Animator>().Play("Procrastinator.New State");
+        }
     }
 }
