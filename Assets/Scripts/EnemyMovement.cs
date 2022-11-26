@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour {
 	private int wavepointIndex = 0;
 
 	private Enemy enemy;
+	private bool reachedEnd = false;
 
 	void Start()
 	{
@@ -18,16 +19,24 @@ public class EnemyMovement : MonoBehaviour {
 
 	void Update()
 	{
-		Vector3 dir = target.position - transform.position;
-		transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
-
-		if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+		if (gameObject.tag != "Dead" && !reachedEnd)
 		{
-			GetNextWaypoint();
+			Vector3 dir = target.position - transform.position;
+			transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
+
+			if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+			{
+				GetNextWaypoint();
+			}
+
+			transform.rotation = Quaternion.LookRotation (dir);
+			enemy.speed = enemy.startSpeed;
 		}
 
-		transform.rotation = Quaternion.LookRotation (dir);
-		enemy.speed = enemy.startSpeed;
+		else if (!reachedEnd)
+		{
+			transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, transform.eulerAngles.z);
+		}
 	}
 
 	void GetNextWaypoint()
@@ -44,9 +53,20 @@ public class EnemyMovement : MonoBehaviour {
 
 	void EndPath()
 	{
+		reachedEnd = true;
 		PlayerStats.Lives--;
 		WaveSpawner.EnemiesAlive--;
-		Destroy(gameObject);
+
+		GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+		if (transform.Find("Bomb"))
+		{
+			GameObject effect = Instantiate(GetComponent<Enemy>().deathEffect, transform.position, Quaternion.identity);
+			Destroy(effect, 5f);
+			Destroy(gameObject);
+		}
+		else
+			GetComponent<Animator>().SetTrigger("attack");
 	}
 
 }

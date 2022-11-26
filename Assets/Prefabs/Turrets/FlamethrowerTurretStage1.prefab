@@ -310,20 +310,29 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   barrelSmoke: {fileID: 0}
   fireRate: 1
+  rotating: 0
   barrelSpeedMax: 300
   barrelAcc: 5
-  firePoint: {fileID: 0}
+  turretBarrel: {fileID: 0}
   useFire: 1
-  damageOverTime: 3
+  burnVal: 1
   flameEffect: {fileID: 9153918951944262133, guid: 53ce0c5bc5f720e4ea87307c13d34974, type: 3}
-  impactLight: {fileID: 0}
   firePointLeft: {fileID: 2255183006350893864}
   firePointRight: {fileID: 8841919810522735999}
+  useLaser: 0
+  laserDamage: 0
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  laserEffect: {fileID: 0}
+  isSniper: 0
+  firePointSub: {fileID: 0}
+  firePointSide1: {fileID: 0}
+  firePointSide2: {fileID: 0}
   enemyTag: Enemy
   partToRotate: {fileID: 6933820420515144344}
-  turretBarrel: {fileID: 0}
   nextStage: {fileID: 8969306337824291657, guid: 320d19c790282134593fed292fa75cd7, type: 3}
   turnSpeed: 10
+  firePoint: {fileID: 2255183006350893864}
 --- !u!1001 &7668588638741225322
 PrefabInstance:
   m_ObjectHideFlags: 0

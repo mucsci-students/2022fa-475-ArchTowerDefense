@@ -1,127 +1,359 @@
 fileFormatVersion: 2
 guid: ba3acdea5ad2bb048b6671d2ac58c07f
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Chest
-    100002: Foot_l
-    100004: Foot_r
-    100006: Hand_l
-    100008: Hand_r
-    100010: Head
-    100012: Head.001
-    100014: Hips
-    100016: LowerArm_l
-    100018: LowerArm_r
-    100020: LowerLeg_l
-    100022: LowerLeg_r
-    100024: Neck
-    100026: Shoulder_l
-    100028: Shoulder_r
-    100030: Spine
-    100032: Toe_l
-    100034: Toe_r
-    100036: UpperArm_l
-    100038: UpperArm_r
-    100040: UpperLeg_l
-    100042: UpperLeg_r
-    100044: //RootNode
-    100046: Zombie_Calf_L
-    100048: Zombie_Calf_R
-    100050: Zombie_Hand_L
-    100052: Zombie_Hand_R
-    100054: Zombie_Head
-    100056: Zombie_LowerArm_L
-    100058: Zombie_LowerArm_R
-    100060: Zombie_Pelves
-    100062: Zombie_Rig
-    100064: Zombie_Spine1_L
-    100066: Zombie_Spine1_R
-    100068: Zombie_Spine_L
-    100070: Zombie_Spine_R
-    100072: Zombie_Thigh_L
-    100074: Zombie_Thigh_R
-    100076: Zombie_UpperArm_L
-    100078: Zombie_UpperArm_R
-    400000: Chest
-    400002: Foot_l
-    400004: Foot_r
-    400006: Hand_l
-    400008: Hand_r
-    400010: Head
-    400012: Head.001
-    400014: Hips
-    400016: LowerArm_l
-    400018: LowerArm_r
-    400020: LowerLeg_l
-    400022: LowerLeg_r
-    400024: Neck
-    400026: Shoulder_l
-    400028: Shoulder_r
-    400030: Spine
-    400032: Toe_l
-    400034: Toe_r
-    400036: UpperArm_l
-    400038: UpperArm_r
-    400040: UpperLeg_l
-    400042: UpperLeg_r
-    400044: //RootNode
-    400046: Zombie_Calf_L
-    400048: Zombie_Calf_R
-    400050: Zombie_Hand_L
-    400052: Zombie_Hand_R
-    400054: Zombie_Head
-    400056: Zombie_LowerArm_L
-    400058: Zombie_LowerArm_R
-    400060: Zombie_Pelves
-    400062: Zombie_Rig
-    400064: Zombie_Spine1_L
-    400066: Zombie_Spine1_R
-    400068: Zombie_Spine_L
-    400070: Zombie_Spine_R
-    400072: Zombie_Thigh_L
-    400074: Zombie_Thigh_R
-    400076: Zombie_UpperArm_L
-    400078: Zombie_UpperArm_R
-    2100000: Zombie_StarterPalette
-    4300000: Zombie_LowerArm_L
-    4300002: Zombie_Hand_L
-    4300004: Zombie_Hand_R
-    4300006: Zombie_Calf_R
-    4300008: Zombie_Head
-    4300010: Zombie_Spine_R
-    4300012: Zombie_LowerArm_R
-    4300014: Zombie_Calf_L
-    4300016: Zombie_Thigh_R
-    4300018: Zombie_UpperArm_R
-    4300020: Zombie_UpperArm_L
-    4300022: Zombie_Pelves
-    4300024: Zombie_Thigh_L
-    4300026: Zombie_Spine1_R
-    4300028: Zombie_Spine1_L
-    4300030: Zombie_Spine_L
-    7400000: Zombie_Rig|Zombie_Attack
-    7400002: Zombie_Rig|Zombie_Idle.001
-    9500000: //RootNode
-    13700000: Zombie_Calf_L
-    13700002: Zombie_Calf_R
-    13700004: Zombie_Hand_L
-    13700006: Zombie_Hand_R
-    13700008: Zombie_Head
-    13700010: Zombie_LowerArm_L
-    13700012: Zombie_LowerArm_R
-    13700014: Zombie_Pelves
-    13700016: Zombie_Spine1_L
-    13700018: Zombie_Spine1_R
-    13700020: Zombie_Spine_L
-    13700022: Zombie_Spine_R
-    13700024: Zombie_Thigh_L
-    13700026: Zombie_Thigh_R
-    13700028: Zombie_UpperArm_L
-    13700030: Zombie_UpperArm_R
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Chest
+  - first:
+      1: 100002
+    second: Foot_l
+  - first:
+      1: 100004
+    second: Foot_r
+  - first:
+      1: 100006
+    second: Hand_l
+  - first:
+      1: 100008
+    second: Hand_r
+  - first:
+      1: 100010
+    second: Head
+  - first:
+      1: 100012
+    second: Head.001
+  - first:
+      1: 100014
+    second: Hips
+  - first:
+      1: 100016
+    second: LowerArm_l
+  - first:
+      1: 100018
+    second: LowerArm_r
+  - first:
+      1: 100020
+    second: LowerLeg_l
+  - first:
+      1: 100022
+    second: LowerLeg_r
+  - first:
+      1: 100024
+    second: Neck
+  - first:
+      1: 100026
+    second: Shoulder_l
+  - first:
+      1: 100028
+    second: Shoulder_r
+  - first:
+      1: 100030
+    second: Spine
+  - first:
+      1: 100032
+    second: Toe_l
+  - first:
+      1: 100034
+    second: Toe_r
+  - first:
+      1: 100036
+    second: UpperArm_l
+  - first:
+      1: 100038
+    second: UpperArm_r
+  - first:
+      1: 100040
+    second: UpperLeg_l
+  - first:
+      1: 100042
+    second: UpperLeg_r
+  - first:
+      1: 100044
+    second: //RootNode
+  - first:
+      1: 100046
+    second: Zombie_Calf_L
+  - first:
+      1: 100048
+    second: Zombie_Calf_R
+  - first:
+      1: 100050
+    second: Zombie_Hand_L
+  - first:
+      1: 100052
+    second: Zombie_Hand_R
+  - first:
+      1: 100054
+    second: Zombie_Head
+  - first:
+      1: 100056
+    second: Zombie_LowerArm_L
+  - first:
+      1: 100058
+    second: Zombie_LowerArm_R
+  - first:
+      1: 100060
+    second: Zombie_Pelves
+  - first:
+      1: 100062
+    second: Zombie_Rig
+  - first:
+      1: 100064
+    second: Zombie_Spine1_L
+  - first:
+      1: 100066
+    second: Zombie_Spine1_R
+  - first:
+      1: 100068
+    second: Zombie_Spine_L
+  - first:
+      1: 100070
+    second: Zombie_Spine_R
+  - first:
+      1: 100072
+    second: Zombie_Thigh_L
+  - first:
+      1: 100074
+    second: Zombie_Thigh_R
+  - first:
+      1: 100076
+    second: Zombie_UpperArm_L
+  - first:
+      1: 100078
+    second: Zombie_UpperArm_R
+  - first:
+      4: 400000
+    second: Chest
+  - first:
+      4: 400002
+    second: Foot_l
+  - first:
+      4: 400004
+    second: Foot_r
+  - first:
+      4: 400006
+    second: Hand_l
+  - first:
+      4: 400008
+    second: Hand_r
+  - first:
+      4: 400010
+    second: Head
+  - first:
+      4: 400012
+    second: Head.001
+  - first:
+      4: 400014
+    second: Hips
+  - first:
+      4: 400016
+    second: LowerArm_l
+  - first:
+      4: 400018
+    second: LowerArm_r
+  - first:
+      4: 400020
+    second: LowerLeg_l
+  - first:
+      4: 400022
+    second: LowerLeg_r
+  - first:
+      4: 400024
+    second: Neck
+  - first:
+      4: 400026
+    second: Shoulder_l
+  - first:
+      4: 400028
+    second: Shoulder_r
+  - first:
+      4: 400030
+    second: Spine
+  - first:
+      4: 400032
+    second: Toe_l
+  - first:
+      4: 400034
+    second: Toe_r
+  - first:
+      4: 400036
+    second: UpperArm_l
+  - first:
+      4: 400038
+    second: UpperArm_r
+  - first:
+      4: 400040
+    second: UpperLeg_l
+  - first:
+      4: 400042
+    second: UpperLeg_r
+  - first:
+      4: 400044
+    second: //RootNode
+  - first:
+      4: 400046
+    second: Zombie_Calf_L
+  - first:
+      4: 400048
+    second: Zombie_Calf_R
+  - first:
+      4: 400050
+    second: Zombie_Hand_L
+  - first:
+      4: 400052
+    second: Zombie_Hand_R
+  - first:
+      4: 400054
+    second: Zombie_Head
+  - first:
+      4: 400056
+    second: Zombie_LowerArm_L
+  - first:
+      4: 400058
+    second: Zombie_LowerArm_R
+  - first:
+      4: 400060
+    second: Zombie_Pelves
+  - first:
+      4: 400062
+    second: Zombie_Rig
+  - first:
+      4: 400064
+    second: Zombie_Spine1_L
+  - first:
+      4: 400066
+    second: Zombie_Spine1_R
+  - first:
+      4: 400068
+    second: Zombie_Spine_L
+  - first:
+      4: 400070
+    second: Zombie_Spine_R
+  - first:
+      4: 400072
+    second: Zombie_Thigh_L
+  - first:
+      4: 400074
+    second: Zombie_Thigh_R
+  - first:
+      4: 400076
+    second: Zombie_UpperArm_L
+  - first:
+      4: 400078
+    second: Zombie_UpperArm_R
+  - first:
+      21: 2100000
+    second: Zombie_StarterPalette
+  - first:
+      43: 4300000
+    second: Zombie_LowerArm_L
+  - first:
+      43: 4300002
+    second: Zombie_Hand_L
+  - first:
+      43: 4300004
+    second: Zombie_Hand_R
+  - first:
+      43: 4300006
+    second: Zombie_Calf_R
+  - first:
+      43: 4300008
+    second: Zombie_Head
+  - first:
+      43: 4300010
+    second: Zombie_Spine_R
+  - first:
+      43: 4300012
+    second: Zombie_LowerArm_R
+  - first:
+      43: 4300014
+    second: Zombie_Calf_L
+  - first:
+      43: 4300016
+    second: Zombie_Thigh_R
+  - first:
+      43: 4300018
+    second: Zombie_UpperArm_R
+  - first:
+      43: 4300020
+    second: Zombie_UpperArm_L
+  - first:
+      43: 4300022
+    second: Zombie_Pelves
+  - first:
+      43: 4300024
+    second: Zombie_Thigh_L
+  - first:
+      43: 4300026
+    second: Zombie_Spine1_R
+  - first:
+      43: 4300028
+    second: Zombie_Spine1_L
+  - first:
+      43: 4300030
+    second: Zombie_Spine_L
+  - first:
+      74: 7400000
+    second: Zombie_Rig|Zombie_Attack
+  - first:
+      74: 7400002
+    second: Zombie_Rig|Zombie_Idle.001
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Zombie_Calf_L
+  - first:
+      137: 13700002
+    second: Zombie_Calf_R
+  - first:
+      137: 13700004
+    second: Zombie_Hand_L
+  - first:
+      137: 13700006
+    second: Zombie_Hand_R
+  - first:
+      137: 13700008
+    second: Zombie_Head
+  - first:
+      137: 13700010
+    second: Zombie_LowerArm_L
+  - first:
+      137: 13700012
+    second: Zombie_LowerArm_R
+  - first:
+      137: 13700014
+    second: Zombie_Pelves
+  - first:
+      137: 13700016
+    second: Zombie_Spine1_L
+  - first:
+      137: 13700018
+    second: Zombie_Spine1_R
+  - first:
+      137: 13700020
+    second: Zombie_Spine_L
+  - first:
+      137: 13700022
+    second: Zombie_Spine_R
+  - first:
+      137: 13700024
+    second: Zombie_Thigh_L
+  - first:
+      137: 13700026
+    second: Zombie_Thigh_R
+  - first:
+      137: 13700028
+    second: Zombie_UpperArm_L
+  - first:
+      137: 13700030
+    second: Zombie_UpperArm_R
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -130,6 +362,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -146,7 +379,65 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Zombie_Rig|Zombie_Attack
+      takeName: Zombie_Rig|Zombie_Attack
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Zombie_Rig|Zombie_Idle.001
+      takeName: Zombie_Rig|Zombie_Idle.001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -154,25 +445,34 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -181,10 +481,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Hips
       humanName: Hips
@@ -600,14 +900,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 7c6c6a5e28100ed4398562c2dbba53ec,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 7c6c6a5e28100ed4398562c2dbba53ec, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

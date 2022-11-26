@@ -592,7 +592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &489465943
 Transform:
   m_ObjectHideFlags: 0
@@ -829,21 +829,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 7952893703808218148, guid: ffbf9973665de264eaa03e1dbe1d3681, type: 3}
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 1
     rate: 2
-  - enemy: {fileID: 7952893703808218148, guid: ffbf9973665de264eaa03e1dbe1d3681, type: 3}
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 2
     rate: 2
-  - enemy: {fileID: 7952893703808218148, guid: ffbf9973665de264eaa03e1dbe1d3681, type: 3}
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 3
     rate: 2
-  - enemy: {fileID: 7952893703808218148, guid: 0dd21d4c075a21a4697a064e1fea14c6, type: 3}
+  - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
     count: 2
-    rate: 3
-  - enemy: {fileID: 6986847328652947792, guid: ffbe9bc7d9425fd42878565469724a63, type: 3}
+    rate: 1
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 2
-    rate: 3
+    rate: 0.5
   spawnPoint: {fileID: 546275065}
   timeBetweenWaves: 10
   waveCountdownText: {fileID: 0}
