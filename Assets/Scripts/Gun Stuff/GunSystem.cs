@@ -153,8 +153,10 @@ public class GunSystem : MonoBehaviour
         if(Gun.name == "Pistol")
         {
             Gun.GetComponent<Animator>().Play("Pistol.Shoot");
+            Gun.GetComponent<Animator>().Play("PistolRecoil.SlideBack");
             yield return new WaitForSeconds(0.10f);
             Gun.GetComponent<Animator>().Play("Pistol.New State");
+            Gun.GetComponent<Animator>().Play("PistolRecoil.New State");
         }
         else if(Gun.name == "AssaultRifle")
         {
@@ -173,7 +175,7 @@ public class GunSystem : MonoBehaviour
             // Gun.GetComponent<Animator>().Play("Recoil");
             Gun.GetComponent<Animator>().Play("Procrastinator.Shoot");
             // yield return new WaitForSeconds(0.20f);
-            yield return new WaitForSeconds(1.10f);
+            yield return new WaitForSeconds(1.50f);
             Gun.GetComponent<Animator>().Play("Procrastinator.New State");
         }
         else if(Gun.name == "AK47")
