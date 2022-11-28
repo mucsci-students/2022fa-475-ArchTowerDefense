@@ -179,7 +179,7 @@ public class GunSystem : MonoBehaviour
         else if(Gun.name == "AK47")
         {
             Gun.GetComponent<Animator>().Play("AK47.Shoot");
-            yield return new WaitForSeconds(0.50f);
+            yield return new WaitForSeconds(0.10f);
             Gun.GetComponent<Animator>().Play("AK47.New State");
         }
     }
