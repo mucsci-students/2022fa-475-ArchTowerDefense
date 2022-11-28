@@ -1492,7 +1492,7 @@ Transform:
   - {fileID: 1235180599}
   - {fileID: 317154144}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &767573820
 GameObject:
@@ -1774,84 +1774,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991749980}
   m_CullTransparentMesh: 1
---- !u!1 &994106303
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 994106306}
-  - component: {fileID: 994106305}
-  - component: {fileID: 994106304}
-  m_Layer: 9
-  m_Name: Terrain (1)
-  m_TagString: Ground
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!154 &994106304
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994106303}
-  m_Material: {fileID: 0}
-  m_Enabled: 1
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
---- !u!218 &994106305
-Terrain:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994106303}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_TerrainData: {fileID: 0}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
-  m_DrawHeightmap: 1
-  m_DrawInstanced: 0
-  m_DrawTreesAndFoliage: 1
-  m_StaticShadowCaster: 0
-  m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 47669d19000056b8fb7be6ccdb7d1e4b, type: 2}
-  m_BakeLightProbesForTrees: 1
-  m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.0256
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
-  m_GroupingID: 0
-  m_RenderingLayerMask: 1
-  m_AllowAutoConnect: 1
---- !u!4 &994106306
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994106303}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042686299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,7 +2353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3107650832136577206, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4719303459145269229, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Layer
@@ -2567,7 +2489,7 @@ Animator:
   m_GameObject: {fileID: 1156019643}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 75128f49358376f34a6426f31ef5186a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0c7b75c66b49d02c58b7bd04299901d8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4274,7 +4196,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073599518
 GameObject:
@@ -4456,11 +4378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 20866010165966149, guid: fcbd119764ab42502885ee999b386018, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20866010165966149, guid: fcbd119764ab42502885ee999b386018, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 140
+      value: 139
       objectReference: {fileID: 0}
     - target: {fileID: 20866010165966149, guid: fcbd119764ab42502885ee999b386018, type: 3}
       propertyPath: m_LocalRotation.w
