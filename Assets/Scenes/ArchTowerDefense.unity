@@ -363,6 +363,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3454450027807976280, guid: 5ca4cbbb1379d64e08c892cf252e62c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7da7b441754945419f9ea4cd5e4c0ed, type: 2}
     - target: {fileID: 4049086116173166112, guid: 5ca4cbbb1379d64e08c892cf252e62c6, type: 3}
       propertyPath: m_Controller
       value: 
@@ -427,7 +431,8 @@ PrefabInstance:
       propertyPath: m_Animation
       value: 
       objectReference: {fileID: 7400000, guid: ec3555f7d9a327b89b22d5ea10687c44, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4699789522827712379, guid: 5ca4cbbb1379d64e08c892cf252e62c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ca4cbbb1379d64e08c892cf252e62c6, type: 3}
 --- !u!114 &388366969 stripped
 MonoBehaviour:
@@ -660,9 +665,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &933695989 stripped
+--- !u!1 &817737781 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2882979309283518706, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2882979308476342759, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
   m_PrefabInstance: {fileID: 1128822636}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1128822636
@@ -844,10 +849,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 231823189, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: text
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: crosshair
       value: 
-      objectReference: {fileID: 933695989}
+      objectReference: {fileID: 817737781}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: crosshairImages.Array.data[0]
       value: 
