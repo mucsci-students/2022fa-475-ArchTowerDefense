@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour {
 
-	public static Transform[] points;
+	public Transform[] points;
 
 	void Awake ()
 	{

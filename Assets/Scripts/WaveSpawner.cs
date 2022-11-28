@@ -5,15 +5,12 @@ using UnityEngine.UI;
 public class WaveSpawner : MonoBehaviour {
 
 	public static int EnemiesAlive = 0;
+	public bool finished = true;
 
 	public Wave[] waves;
+	public GameObject waypoints;
 
 	public Transform spawnPoint;
-
-	public float timeBetweenWaves = 5f;
-	private float countdown = 2f;
-
-	public Text waveCountdownText;
 
 	public GameManager gameManager;
 
@@ -26,28 +23,18 @@ public class WaveSpawner : MonoBehaviour {
 			return;
 		}
 
+		finished = true;
+
 		if (waveIndex == waves.Length)
 		{
 			gameManager.WinLevel();
 			this.enabled = false;
 		}
-
-		if (countdown <= 0f)
-		{
-			StartCoroutine(SpawnWave());
-			countdown = timeBetweenWaves;
-			return;
-		}
-
-		countdown -= Time.deltaTime;
-
-		countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-
-		//waveCountdownText.text = string.Format("{0:00.00}", countdown);
 	}
 
-	IEnumerator SpawnWave ()
+	public IEnumerator SpawnWave ()
 	{
+		finished = false;
 		PlayerStats.Rounds++;
 
 		Wave wave = waves[waveIndex];
@@ -65,7 +52,8 @@ public class WaveSpawner : MonoBehaviour {
 
 	void SpawnEnemy (GameObject enemy)
 	{
-		Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+		var enemyInst = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+		enemyInst.GetComponent<EnemyMovement>().waypoints = waypoints;
 	}
 
 }

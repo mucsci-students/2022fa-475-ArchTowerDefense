@@ -5,6 +5,7 @@ using System.Collections;
 public class EnemyMovement : MonoBehaviour {
 
 	private Transform target;
+	public GameObject waypoints;
 	private int wavepointIndex = 0;
 
 	private Enemy enemy;
@@ -13,8 +14,7 @@ public class EnemyMovement : MonoBehaviour {
 	void Start()
 	{
 		enemy = GetComponent<Enemy>();
-
-		target = Waypoints.points[0];
+		target = waypoints.GetComponent<Waypoints>().points[0];
 	}
 
 	void Update()
@@ -41,14 +41,14 @@ public class EnemyMovement : MonoBehaviour {
 
 	void GetNextWaypoint()
 	{
-		if (wavepointIndex >= Waypoints.points.Length - 1)
+		if (wavepointIndex >= waypoints.GetComponent<Waypoints>().points.Length - 1)
 		{
 			EndPath();
 			return;
 		}
 
 		wavepointIndex++;
-		target = Waypoints.points[wavepointIndex];
+		target = waypoints.GetComponent<Waypoints>().points[wavepointIndex];
 	}
 
 	void EndPath()
