@@ -46,7 +46,7 @@ public class GunSystem : MonoBehaviour
     {
         MyInput();
 
-        if(bulletsLeft < 6)
+        if(bulletsLeft < (.25 * magazineSize))
         {
             text.color = new Color(.698f, .133f, .133f, 1.0f);
         }
@@ -150,13 +150,37 @@ public class GunSystem : MonoBehaviour
     IEnumerator StartRecoil()
     {
         Debug.Log(Gun.name + " recoil");
-        if(Gun.name == "procrastinator")
+        if(Gun.name == "Pistol")
+        {
+            Gun.GetComponent<Animator>().Play("Pistol.Shoot");
+            yield return new WaitForSeconds(0.10f);
+            Gun.GetComponent<Animator>().Play("Pistol.New State");
+        }
+        else if(Gun.name == "AssaultRifle")
+        {
+            Gun.GetComponent<Animator>().Play("AssaultRifle.Shoot");
+            yield return new WaitForSeconds(0.50f);
+            Gun.GetComponent<Animator>().Play("AssaultRifle.New State");
+        }
+        else if(Gun.name == "SMG")
+        {
+            Gun.GetComponent<Animator>().Play("SMG.Shoot");
+            yield return new WaitForSeconds(0.10f);
+            Gun.GetComponent<Animator>().Play("SMG.New State");
+        }
+        else if(Gun.name == "procrastinator")
         {
             // Gun.GetComponent<Animator>().Play("Recoil");
             Gun.GetComponent<Animator>().Play("Procrastinator.Shoot");
             // yield return new WaitForSeconds(0.20f);
             yield return new WaitForSeconds(1.10f);
             Gun.GetComponent<Animator>().Play("Procrastinator.New State");
+        }
+        else if(Gun.name == "AK47")
+        {
+            Gun.GetComponent<Animator>().Play("AK47.Shoot");
+            yield return new WaitForSeconds(0.10f);
+            Gun.GetComponent<Animator>().Play("AK47.New State");
         }
     }
 }
