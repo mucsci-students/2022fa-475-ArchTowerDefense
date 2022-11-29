@@ -658,7 +658,10 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 1712323150}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  groundImpact: {fileID: 0}
+  enemyImpact: {fileID: 0}
+  turretImpact: {fileID: 0}
+  defaultImpact: {fileID: 0}
   text: {fileID: 0}
 --- !u!95 &322489523
 Animator:
@@ -691,7 +694,6 @@ GameObject:
   - component: {fileID: 5695342577080548658}
   - component: {fileID: 231823189}
   - component: {fileID: 231823188}
-  - component: {fileID: 8814602784829103557}
   m_Layer: 12
   m_Name: SMG
   m_TagString: Untagged
@@ -744,7 +746,10 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 1567553966862885234}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1607639662943796, guid: a1a36200a3c61b34b9abfaed1373f4cc, type: 3}
+  groundImpact: {fileID: 0}
+  enemyImpact: {fileID: 0}
+  turretImpact: {fileID: 0}
+  defaultImpact: {fileID: 0}
   text: {fileID: 0}
 --- !u!95 &231823188
 Animator:
@@ -766,36 +771,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8814602784829103557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567553966862885234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363a398e7b0984e458f18aa7e239db36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  timeBetweenShooting: 0.05
-  spread: 0
-  range: 100
-  reloadTime: 1.2
-  timeBetweenShots: 0
-  magazineSize: 25
-  bulletsPerTap: 1
-  allowButtonHold: 1
-  cam: {fileID: 2000000}
-  attackPoint: {fileID: 4805131190941196077}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 2048
-  Gun: {fileID: 1567553966862885234}
-  muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1607639662943796, guid: a1a36200a3c61b34b9abfaed1373f4cc, type: 3}
-  text: {fileID: 0}
 --- !u!1 &1843887421090765390
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +813,6 @@ GameObject:
   - component: {fileID: 3909736995797983534}
   - component: {fileID: 1910614893}
   - component: {fileID: 1910614892}
-  - component: {fileID: 1644637184568836400}
   m_Layer: 12
   m_Name: AssaultRifle
   m_TagString: Untagged
@@ -891,7 +865,10 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 3107650832136577206}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  groundImpact: {fileID: 0}
+  enemyImpact: {fileID: 0}
+  turretImpact: {fileID: 0}
+  defaultImpact: {fileID: 0}
   text: {fileID: 0}
 --- !u!95 &1910614892
 Animator:
@@ -913,36 +890,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1644637184568836400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3107650832136577206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363a398e7b0984e458f18aa7e239db36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 22
-  timeBetweenShooting: 0.05
-  spread: 0
-  range: 240
-  reloadTime: 1.5
-  timeBetweenShots: 0
-  magazineSize: 10
-  bulletsPerTap: 1
-  allowButtonHold: 0
-  cam: {fileID: 2000000}
-  attackPoint: {fileID: 7174426129076091943}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 2048
-  Gun: {fileID: 3107650832136577206}
-  muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
-  text: {fileID: 0}
 --- !u!1 &3213469220232299454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,7 +963,6 @@ GameObject:
   - component: {fileID: 6256955545610728574}
   - component: {fileID: 1660585246}
   - component: {fileID: 1660585245}
-  - component: {fileID: 2905972001755717785}
   m_Layer: 0
   m_Name: AK47
   m_TagString: Untagged
@@ -1069,7 +1015,10 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 4946234942908026269}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  groundImpact: {fileID: 0}
+  enemyImpact: {fileID: 0}
+  turretImpact: {fileID: 0}
+  defaultImpact: {fileID: 0}
   text: {fileID: 0}
 --- !u!95 &1660585245
 Animator:
@@ -1091,36 +1040,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2905972001755717785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4946234942908026269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363a398e7b0984e458f18aa7e239db36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 37
-  timeBetweenShooting: 1.28
-  spread: 0
-  range: 1000
-  reloadTime: 1.1
-  timeBetweenShots: 0
-  magazineSize: 30
-  bulletsPerTap: 1
-  allowButtonHold: 0
-  cam: {fileID: 2000000}
-  attackPoint: {fileID: 2697812557336097747}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 2048
-  Gun: {fileID: 4946234942908026269}
-  muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
-  text: {fileID: 0}
 --- !u!1 &5229692248688849116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,9 +1163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8740284020257624486}
   - component: {fileID: 1156019645}
-  - component: {fileID: 8132774883428381376}
   - component: {fileID: 1156019644}
-  - component: {fileID: 401001051715990658}
   m_Layer: 12
   m_Name: procrastinator
   m_TagString: Untagged
@@ -1299,38 +1216,11 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 8914949156016660408}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  groundImpact: {fileID: 0}
+  enemyImpact: {fileID: 0}
+  turretImpact: {fileID: 0}
+  defaultImpact: {fileID: 0}
   text: {fileID: 2100000, guid: e7da7b441754945419f9ea4cd5e4c0ed, type: 2}
---- !u!114 &8132774883428381376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8914949156016660408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363a398e7b0984e458f18aa7e239db36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  timeBetweenShooting: 2
-  spread: 0
-  range: 1000
-  reloadTime: 2
-  timeBetweenShots: 0
-  magazineSize: 5
-  bulletsPerTap: 1
-  allowButtonHold: 0
-  cam: {fileID: 2000000}
-  attackPoint: {fileID: 7741949771549325568}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 2048
-  Gun: {fileID: 8914949156016660408}
-  muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
-  text: {fileID: 0}
 --- !u!95 &1156019644
 Animator:
   serializedVersion: 4
@@ -1351,36 +1241,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &401001051715990658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8914949156016660408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363a398e7b0984e458f18aa7e239db36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  timeBetweenShooting: 2
-  spread: 0
-  range: 1000
-  reloadTime: 2
-  timeBetweenShots: 0
-  magazineSize: 5
-  bulletsPerTap: 1
-  allowButtonHold: 0
-  cam: {fileID: 0}
-  attackPoint: {fileID: 7741949771549325568}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 2048
-  Gun: {fileID: 8914949156016660408}
-  muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  impactEffect: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
-  text: {fileID: 0}
 --- !u!1001 &3181606173653479486
 PrefabInstance:
   m_ObjectHideFlags: 0
