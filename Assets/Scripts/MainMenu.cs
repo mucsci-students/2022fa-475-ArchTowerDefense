@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject infoScreen;
     public GameObject settingsScreen;
+    public GameObject infoPages;
     private bool lowerInfo = false;
     private bool lowerSettings = false;
     private bool raiseInfo = false;
@@ -58,6 +59,42 @@ public class MainMenu : MonoBehaviour
     public void TransitionToGame()
     {
         SceneManager.LoadScene("ArchTowerDefense");
+    }
+
+    public void InfoScreenPage(int val)
+    {
+        // Back a page
+        if (val == 0)
+        {
+            foreach(Transform obj in infoPages.transform)
+            {
+                if (obj.gameObject.activeSelf)
+                {
+                    if (obj.transform.GetSiblingIndex() == 0)
+                        infoPages.transform.GetChild(infoPages.transform.childCount - 1).gameObject.SetActive(true);
+                    else
+                        infoPages.transform.GetChild(obj.transform.GetSiblingIndex() - 1).gameObject.SetActive(true);
+                    obj.gameObject.SetActive(false);
+                    return;
+                }
+            }
+        }
+        // Forward a page
+        else
+        {
+            foreach(Transform obj in infoPages.transform)
+            {
+                if (obj.gameObject.activeSelf)
+                {
+                    if (obj.transform.GetSiblingIndex() == infoPages.transform.childCount - 1)
+                        infoPages.transform.GetChild(0).gameObject.SetActive(true);
+                    else
+                        infoPages.transform.GetChild(obj.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
+                    obj.gameObject.SetActive(false);
+                    return;
+                }
+            }
+        }
     }
 
     public void InfoScreenTrans(int val)
