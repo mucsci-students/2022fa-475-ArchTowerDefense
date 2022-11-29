@@ -452,10 +452,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Arch
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 7400000, guid: ec3555f7d9a327b89b22d5ea10687c44, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ca4cbbb1379d64e08c892cf252e62c6, type: 3}
 --- !u!114 &388366969 stripped
