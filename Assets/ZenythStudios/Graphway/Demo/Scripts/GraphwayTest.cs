@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GraphwayTest : MonoBehaviour 
 {
-    public const int MAX_SPEED = 50;
-    public const int ACCELERATION = 5;
+    public const int MAX_SPEED = 10;
+    public const int ACCELERATION = 2;
 
     [Tooltip("Enable Debug Mode to see algoritm in action slowed down. MAKE SURE GIZMOS ARE ENABLED!")]
     public bool debugMode = false;
+
+	public Camera cam;
 
     private GwWaypoint[] waypoints;
 	private float speed = 0;
@@ -21,14 +23,20 @@ public class GraphwayTest : MonoBehaviour
             // Check if an object in the scene was targeted
 			RaycastHit hit;
 			
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                // Object hit
-                // Use Graphway to try and find a path to hit position
-                Graphway.FindPath(transform.position, hit.point, FindPathCallback, true, debugMode);
-            }
+            // if (Physics.Raycast(ray, out hit))
+            // {
+            //     // Object hit
+            //     // Use Graphway to try and find a path to hit position
+            //     Graphway.FindPath(transform.position, hit.point, FindPathCallback, true, debugMode);
+            // }
+			if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
+			{
+				// Object hit
+				// Use Graphway to try and find a path to hit position
+				Graphway.FindPath(transform.position, hit.point, FindPathCallback, true, debugMode);
+			}
 		}
 		
 		// Move towards waypoints (if has waypoints)
