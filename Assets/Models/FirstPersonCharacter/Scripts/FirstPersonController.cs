@@ -162,7 +162,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             // Changing the color of the crosshair when aiming at enemies
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 300f))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 400f))
             {
                 if (hit.transform.gameObject.CompareTag("Enemy"))
                 {

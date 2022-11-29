@@ -31,8 +31,14 @@ public class GunSystem : MonoBehaviour
     public GameObject Gun;
 
     //  Graphics
+    [Header("Graphics")]
     public GameObject muzzleFlash;
-    public GameObject impactEffect;
+    public GameObject groundImpact;
+    public GameObject enemyImpact;
+    public GameObject turretImpact;
+    public GameObject defaultImpact;
+    [HideInInspector]
+    private GameObject impactEffect;
 
     public TextMeshProUGUI text;
 
@@ -114,13 +120,32 @@ public class GunSystem : MonoBehaviour
         Vector3 direction = cam.transform.forward + new Vector3(x, y, 0);
 
         // Ray Cast
-        if (Physics.Raycast(cam.transform.position, direction, out rayHit, range, whatIsEnemy))
+        if (Physics.Raycast(cam.transform.position, direction, out rayHit, range))
         {
             Debug.Log(rayHit.collider.name);
+
+            switch(rayHit.collider.name)
+            {
+                case "Ground":
+                    impactEffect = groundImpact;
+                    break;
+                case "Zombie":
+                    impactEffect = enemyImpact;
+                    break;
+                case "Turret":
+                    impactEffect = turretImpact;
+                    break;
+                default:
+                    impactEffect = defaultImpact;
+                    break;
+            }
 
             if (rayHit.collider.CompareTag("Enemy"))
                 // Make sure enemies have the tag "Enemy" and have the TakeDamage function
                 rayHit.collider.GetComponent<Enemy>().TakeDamage(damage);
+
+            if(rayHit.collider.CompareTag("Arch"))
+                rayHit.collider.GetComponent<Arch>().TakeDamage(damage);
         }
 
 
@@ -128,7 +153,7 @@ public class GunSystem : MonoBehaviour
         GameObject muzzFlash = (GameObject)Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
         muzzFlash.transform.parent = Gun.transform;
         
-        GameObject impactGO = Instantiate(impactEffect, rayHit.point, Quaternion.LookRotation(rayHit.normal));
+        GameObject impactGO = Instantiate(impactEffect, rayHit.point, cam.transform.rotation);
         Destroy(impactGO, 2f);
 
         // Recoil

@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Arch
   - Dead
+  - Waypoint
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - Player
   - 
-  - 
+  - Arch
   - Path
   - Minimap
   - Enemies
