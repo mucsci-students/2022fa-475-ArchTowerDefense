@@ -36,7 +36,7 @@ public class GunSystem : MonoBehaviour
     public GameObject groundImpact;
     public GameObject enemyImpact;
     public GameObject turretImpact;
-    public GameObject archImpact;
+    // public GameObject archImpact;
     public GameObject defaultImpact;
     [HideInInspector]
     private GameObject impactEffect;
@@ -131,6 +131,9 @@ public class GunSystem : MonoBehaviour
                     impactEffect = groundImpact;
                     break;
                 case "Zombie":
+                case "Skeleton":
+                case "RedSkeleton":
+                case "BombSkeleton":
                     impactEffect = enemyImpact;
                     break;
                 case "Turret":
