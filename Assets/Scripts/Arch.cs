@@ -21,7 +21,8 @@ public class Arch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthBar.GetComponent<Slider>().value = health / startHealth;
+        if (healthBar != null)
+            healthBar.GetComponent<Slider>().value = health / startHealth;
     }
 
     public void TakeDamage(float amount)
