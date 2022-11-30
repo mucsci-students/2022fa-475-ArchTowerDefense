@@ -10,6 +10,7 @@ public class GraphwayTest : MonoBehaviour
     [Tooltip("Enable Debug Mode to see algoritm in action slowed down. MAKE SURE GIZMOS ARE ENABLED!")]
     public bool debugMode = false;
 
+	[Header("Player Camera")]
 	public Camera cam;
 
     private GwWaypoint[] waypoints;
@@ -36,6 +37,8 @@ public class GraphwayTest : MonoBehaviour
 				// Object hit
 				// Use Graphway to try and find a path to hit position
 				Graphway.FindPath(transform.position, hit.point, FindPathCallback, true, debugMode);
+
+				gameObject.GetComponent<Animator>().Play("Zoop.Run");
 			}
 		}
 		
@@ -63,6 +66,7 @@ public class GraphwayTest : MonoBehaviour
 		{
 			// Reset speed
 			speed = 0;
+			gameObject.GetComponent<Animator>().Play("Zoop.Idle");
 		}
 		
 		// Draw Path
