@@ -56,6 +56,11 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    public void TransitionToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void TransitionToGame()
     {
         SceneManager.LoadScene("ArchTowerDefense");
