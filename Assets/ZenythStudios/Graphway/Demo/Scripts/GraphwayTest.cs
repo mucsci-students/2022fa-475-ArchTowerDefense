@@ -13,7 +13,7 @@ public class GraphwayTest : MonoBehaviour
 	public Camera cam;
 
     private GwWaypoint[] waypoints;
-	private float speed = 0;
+	public float speed = 0;
 	
 	void Update()
 	{

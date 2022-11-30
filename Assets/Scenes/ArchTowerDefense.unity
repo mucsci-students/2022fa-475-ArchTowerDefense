@@ -171,7 +171,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1963921445989416, guid: c0c5b7d4086cb6e4ea7873a31791aff4, type: 3}
       propertyPath: m_Name
-      value: Lewis_withFace
+      value: Zoppetti
       objectReference: {fileID: 0}
     - target: {fileID: 4681521867576798, guid: c0c5b7d4086cb6e4ea7873a31791aff4, type: 3}
       propertyPath: m_RootOrder
@@ -250,6 +250,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugMode: 1
   cam: {fileID: 223648222}
+  speed: 0
+--- !u!114 &26105557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26105551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28af7bbb48de77a47b40530e1a6d065e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &26294224
 GameObject:
   m_ObjectHideFlags: 0
