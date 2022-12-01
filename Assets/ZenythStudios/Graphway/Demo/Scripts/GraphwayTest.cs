@@ -116,14 +116,4 @@ public class GraphwayTest : MonoBehaviour
 			waypoints = path;
 		}
 	}
-
-
-    void OnGUI()
-    {
-        GUIStyle style = new GUIStyle();
-        style.normal.textColor = Color.red;
-
-        GUI.Label(new Rect(20, 20, 200, 20), "INSTRUCTIONS: Left click on a roadway node to find the quickest path to it.", style);
-        GUI.Label(new Rect(Screen.width - 260, 20, 200, 20), "Make sure GIZMOS are ENABLED! ^^^", style);
-    }
 }

@@ -1,3 +1,5 @@
+// using System.Diagnostics;
+// using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,10 +21,11 @@ public class TurretFoundation : MonoBehaviour
         if (distanceToPlayer <= buildRange)
         {
             // SAM, MENUS CAN GO HERE
-
+            Debug.Log("ABLE TO BUILD");
             // Build minigun or upgrade when E is pressed
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("Minigun");
                 // Build a minigun turret if not there
                 if (transform.childCount == 0) {
                     var builtTurret = Instantiate(minigunTurret, transform.position,  transform.rotation);

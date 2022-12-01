@@ -6252,7 +6252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882979309229035883, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2882979309229035887, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_Pivot.x
@@ -6344,11 +6344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6899571342080297226, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6899571342080297226, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
@@ -7243,6 +7243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+--- !u!1 &1156019642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 1156019641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1156019643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8914949156016660408, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
@@ -10442,8 +10447,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretFoundation
       objectReference: {fileID: 0}
+    - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
+--- !u!1 &1592359709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7350343790376597889, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
+  m_PrefabInstance: {fileID: 1592359708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1592359710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592359709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00511700d7f3af441a7c640bc9b7b9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1156019642}
+  minigunTurret: {fileID: 2053722150602672185, guid: fd3dd88e985bf3249b09af29e926d0f2, type: 3}
+  flamethrowerTurret: {fileID: 8969306337824291657, guid: f330fa22b7af0454e90685841610d969, type: 3}
+  slowdownTurret: {fileID: 7486583233793026271, guid: 5fe212c63b9ab6f41b53fe85dc7c32e4, type: 3}
+  sniperTurret: {fileID: 5291410695033543782, guid: 8860578e23e23db4282691767510c35f, type: 3}
 --- !u!1 &1607855394
 GameObject:
   m_ObjectHideFlags: 0
