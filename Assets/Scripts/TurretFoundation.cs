@@ -30,7 +30,7 @@ public class TurretFoundation : MonoBehaviour
                 if (transform.childCount == 0) {
                     var builtTurret = Instantiate(minigunTurret, transform.position,  transform.rotation);
                     builtTurret.transform.SetParent(transform);
-                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                    builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
                 }
 
                 // Else upgrade to the next version
@@ -43,7 +43,7 @@ public class TurretFoundation : MonoBehaviour
                     var builtTurret = Instantiate(turretUpgrade, transform.position, transform.rotation);
                     builtTurret.transform.GetChild(0).rotation = turretHeadRotation;
                     builtTurret.transform.SetParent(transform);
-                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                    builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
                 }
             }
 
@@ -54,7 +54,7 @@ public class TurretFoundation : MonoBehaviour
                 if (transform.childCount == 0) {
                     var builtTurret = Instantiate(flamethrowerTurret, transform.position,  transform.rotation);
                     builtTurret.transform.SetParent(transform);
-                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                    builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
                 }
             }
 
@@ -65,7 +65,7 @@ public class TurretFoundation : MonoBehaviour
                 if (transform.childCount == 0) {
                     var builtTurret = Instantiate(slowdownTurret, transform.position,  transform.rotation);
                     builtTurret.transform.SetParent(transform);
-                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                    builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
                 }
             }
 
@@ -77,7 +77,7 @@ public class TurretFoundation : MonoBehaviour
                 {
                     var builtTurret = Instantiate(sniperTurret, transform.position, transform.rotation);
                     builtTurret.transform.SetParent(transform);
-                    builtTurret.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+                    builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
                 }
             }
 
