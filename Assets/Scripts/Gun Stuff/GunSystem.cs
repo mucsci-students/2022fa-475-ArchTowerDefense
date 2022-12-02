@@ -124,6 +124,7 @@ public class GunSystem : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, direction, out rayHit, range))
         {
             Debug.Log(rayHit.collider.name);
+            Debug.Log(rayHit.point);
 
             switch(rayHit.collider.name)
             {
