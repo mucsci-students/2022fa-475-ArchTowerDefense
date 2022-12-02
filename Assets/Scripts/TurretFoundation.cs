@@ -52,16 +52,18 @@ public class TurretFoundation : MonoBehaviour
                 // Is there already a turret there?
                 if (!isTurretBuilt()) 
                 {
+                    Debug.Log("THE PROMPT SHOULKD FUCJING SHOW FUCK YOU");
                     buyText.gameObject.SetActive(true);
                 }
                 // Occupied, prompt to sell or upgrade
                 else
                 {
+                    Debug.Log("THE PROMPT SHOULKD FUCJING SHOW FUCK YOU");
                     int sellPrice = 1000;
-                    sellText.SetText("Press Q To Sell  + " + sellPrice);
+                    sellText.SetText("Press Q To Sell  +" + sellPrice);
 
                     int upgradePrice = 3000;
-                    upgradeText.SetText("Press E To Upgrade - " + upgradePrice);
+                    upgradeText.SetText("Press E To Upgrade -" + upgradePrice);
                     
                     upgradeText.gameObject.SetActive(true);
                     sellText.gameObject.SetActive(true);
