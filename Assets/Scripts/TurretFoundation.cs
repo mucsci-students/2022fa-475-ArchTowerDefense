@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TurretFoundation : MonoBehaviour
 {
-    private float buildRange = 3f;
+    private float buildRange = 6f;
     public GameObject player;
     public GameObject minigunTurret;
     public GameObject flamethrowerTurret;

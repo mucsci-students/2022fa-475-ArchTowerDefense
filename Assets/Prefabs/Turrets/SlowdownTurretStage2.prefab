@@ -190,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 7486583233793026271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3843507410779528149}
@@ -272,10 +272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e58e17ccca86642a73d908b186c94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  range: 20
   bulletPrefab: {fileID: 0}
   barrelSmoke: {fileID: 0}
   fireRate: 1
+  rotating: 0
   barrelSpeedMax: 300
   barrelAcc: 5
   turretBarrel: {fileID: 0}
@@ -289,6 +290,10 @@ MonoBehaviour:
   slowAmount: 0.3
   lineRenderer: {fileID: 0}
   laserEffect: {fileID: 4769731140879293427, guid: 0d164f0c2c8e0a74fa49d6342f348b61, type: 3}
+  isSniper: 0
+  firePointSub: {fileID: 0}
+  firePointSide1: {fileID: 0}
+  firePointSide2: {fileID: 0}
   enemyTag: Enemy
   partToRotate: {fileID: 3843507410779528149}
   nextStage: {fileID: 7486583233793026271, guid: 2a94d2e47bd7cf54e9d7498a4c65e3e1, type: 3}
