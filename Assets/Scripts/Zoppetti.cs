@@ -17,6 +17,6 @@ public class Zoppetti : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.SetFloat("speed", GetComponent<GraphwayTest>().speed);
+        // anim.SetFloat("speed", GetComponent<GraphwayTest>().speed);
     }
 }

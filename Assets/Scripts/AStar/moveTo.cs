@@ -20,6 +20,15 @@ public class moveTo : MonoBehaviour
         {
             Debug.Log("Respec");
             agent.destination = player.position;
+          
+            gameObject.GetComponent<Animator>().Play("Zoop.Run");
+            
+        }
+        // gameObject.GetComponent<Animator>().Play("Zoop.Idle");
+        if(agent.transform.position == agent.destination)
+        {
+            Debug.Log("Arrived");
+            gameObject.GetComponent<Animator>().Play("Zoop.Idle");
         }
     }
 }
