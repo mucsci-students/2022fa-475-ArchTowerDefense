@@ -17,12 +17,15 @@ public class TurretFoundation : MonoBehaviour
     public TextMeshProUGUI buyText;
     public TextMeshProUGUI upgradeText;
 
+    public GameObject turretBuyMenu;
+
     // How much the user has spent on this turret to upgrade it
     // Used to calculate sellback price
     private int turretValue = 0;
 
     // So that while in a menu, the prompts dont show up
-    private bool inMenu = false;
+    // move this to FPS controller to acces from other things??
+    public bool inMenu = false;
 
     // prices of each upgrade will scale off of the base price 
     // private int miniGunPrice = 0;
@@ -45,20 +48,18 @@ public class TurretFoundation : MonoBehaviour
 
             // check if there is a turret placed
             isTurretBuilt();
-            // SAM, MENUS CAN GO HERE
-
+           
+            // Key Press Prompts
             if (!inMenu)
             {
                 // Is there already a turret there?
                 if (!isTurretBuilt()) 
                 {
-                    Debug.Log("THE PROMPT SHOULKD FUCJING SHOW FUCK YOU");
                     buyText.gameObject.SetActive(true);
                 }
                 // Occupied, prompt to sell or upgrade
                 else
                 {
-                    Debug.Log("THE PROMPT SHOULKD FUCJING SHOW FUCK YOU");
                     int sellPrice = 1000;
                     sellText.SetText("Press Q To Sell  +" + sellPrice);
 
@@ -71,63 +72,35 @@ public class TurretFoundation : MonoBehaviour
                 }
             }
 
-
-
-
-            // Debug.Log("ABLE TO BUILD");
-            // Build minigun or upgrade when E is pressed
-            if (Input.GetKeyDown(KeyCode.E))
+            // Buy Turret Menu or Upgrade
+            if (Input.GetKeyDown(KeyCode.E) && !inMenu)
             {
-                Debug.Log("Minigun");
-                // Build a minigun turret if not there
                 if (!isTurretBuilt()) {
-                    BuildMiniGun();
+                    inMenu = true;
+
+                    // Make the buy menu active
+                    turretBuyMenu.GetComponent<TurretBuySystem>().ShowBuyTurretMenu(this.gameObject);
+
                 }
 
                 // Else upgrade to the next version
                 else if (transform.GetChild(1).GetComponent<Turret>().nextStage != null)
                 {
-                    var turretUpgrade = transform.GetChild(1).GetComponent<Turret>().nextStage;
-                    // Keeps the turret head facing the direction it's currently facing
-                    var turretHeadRotation = transform.GetChild(1).GetChild(0).rotation;
-                    Destroy(transform.GetChild(1).gameObject);
-                    var builtTurret = Instantiate(turretUpgrade, transform.position, transform.rotation);
-                    builtTurret.transform.GetChild(0).rotation = turretHeadRotation;
-                    builtTurret.transform.SetParent(transform);
-                    Debug.Log("upgraded turret with the parent as " + transform);
-                    builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+                    UpgradeTurret();
                 }
+
+            // Exiting the menu
+            } else if (Input.GetKeyDown(KeyCode.E) && inMenu)
+            {
+                Cursor.visible = false;
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.lockState = CursorLockMode.Confined;
+
+                turretBuyMenu.gameObject.SetActive(false);
+                inMenu = false;
             }
 
-            // Build flamethrower when R is pressed
-            else if (Input.GetKeyDown(KeyCode.R))
-            {
-                // Build a flamethrower turret if not there
-                if (!isTurretBuilt())
-                {
-                    BuildFlameThrower();
-                }
-            }
-
-            // Build slowdown when T is pressed
-            else if (Input.GetKeyDown(KeyCode.T))
-            {
-                // Build a slowdown turret if not there
-                if (!isTurretBuilt())
-                {
-                    BuildSlowDown();
-                }
-            }
-
-            // Build sniper when Y is pressed
-            else if (Input.GetKeyDown(KeyCode.Y))
-            {
-                // Build a sniper turret if not there
-                if (!isTurretBuilt())
-                {
-                    BuildSniper();
-                }
-            }
 
             // Delete turret when Q is pressed
             else if (Input.GetKeyDown(KeyCode.Q))
@@ -174,7 +147,7 @@ public class TurretFoundation : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(true);
     }
 
-    void BuildMiniGun()
+    public void BuildMiniGun()
     {
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
@@ -187,7 +160,7 @@ public class TurretFoundation : MonoBehaviour
 
     }
 
-    void BuildFlameThrower()
+    public void BuildFlameThrower()
     {
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
@@ -197,7 +170,7 @@ public class TurretFoundation : MonoBehaviour
         builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
     }
 
-    void BuildSlowDown()
+    public void BuildSlowDown()
     {
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
@@ -207,13 +180,26 @@ public class TurretFoundation : MonoBehaviour
         builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
     }
 
-    void BuildSniper()
+    public void BuildSniper()
     {
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
 
         var builtTurret = Instantiate(sniperTurret, transform.position, transform.rotation);
         builtTurret.transform.SetParent(transform);
+        builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+    }
+
+    void UpgradeTurret()
+    {
+        var turretUpgrade = transform.GetChild(1).GetComponent<Turret>().nextStage;
+        // Keeps the turret head facing the direction it's currently facing
+        var turretHeadRotation = transform.GetChild(1).GetChild(0).rotation;
+        Destroy(transform.GetChild(1).gameObject);
+        var builtTurret = Instantiate(turretUpgrade, transform.position, transform.rotation);
+        builtTurret.transform.GetChild(0).rotation = turretHeadRotation;
+        builtTurret.transform.SetParent(transform);
+        Debug.Log("upgraded turret with the parent as " + transform);
         builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
     }
 
