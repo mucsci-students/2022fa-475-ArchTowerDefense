@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08038244, g: 0.099777006, b: 0.30118513, a: 1}
+  m_IndirectSpecularColor: {r: 0.08046272, g: 0.09985325, b: 0.30124953, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13327,6 +13327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8269375bca6bf224f93dc45d75cd653e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixer: {fileID: 24100000, guid: 946149be6c1c3e44780987fddcdb3d7b, type: 2}
+  musicSlider: {fileID: 1674192383}
+  soundMixer: {fileID: 24100000, guid: e4acea7940e34674385fe2352621cb3e, type: 2}
+  soundSlider: {fileID: 943646882}
 --- !u!1001 &625090180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14619,11 +14623,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 665865000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1acf6945853529949a0020b559be8d2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1606894792176274a96c8c3b77411bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoScreen: {fileID: 983142752}
-  settingsScreen: {fileID: 719795275}
+  infoScreen: {fileID: 1995968882}
+  settingsScreen: {fileID: 959671413}
   infoPages: {fileID: 1232059840}
 --- !u!1001 &666865752
 PrefabInstance:

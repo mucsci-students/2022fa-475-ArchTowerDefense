@@ -9846,11 +9846,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 246825718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1acf6945853529949a0020b559be8d2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1606894792176274a96c8c3b77411bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoScreen: {fileID: 237264631}
-  settingsScreen: {fileID: 764896577}
+  infoScreen: {fileID: 26294224}
+  settingsScreen: {fileID: 1384927185}
   infoPages: {fileID: 2029181897}
 --- !u!114 &246825721
 MonoBehaviour:
@@ -17700,6 +17700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9265b3afc76e3bd43847644253601404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 139660898}
 --- !u!1 &472044346 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1051545866392792, guid: 331125f4290538c3c937c305e831c8c4, type: 3}
@@ -74144,6 +74145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8269375bca6bf224f93dc45d75cd653e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixer: {fileID: 24100000, guid: 946149be6c1c3e44780987fddcdb3d7b, type: 2}
+  musicSlider: {fileID: 2106854857}
+  soundMixer: {fileID: 24100000, guid: e4acea7940e34674385fe2352621cb3e, type: 2}
+  soundSlider: {fileID: 1286597168}
 --- !u!4 &1905103667
 Transform:
   m_ObjectHideFlags: 0

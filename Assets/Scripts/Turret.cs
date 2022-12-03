@@ -133,10 +133,12 @@ public class Turret : MonoBehaviour {
             	DecreaseBarrelSpeed();
 			}
 
+			GetComponent<AudioSource>().Stop();
 			return;
 		}
 
 		LockOnTarget();
+		GetComponent<AudioSource>().Play();
 
 		if (useFire)
 		{
