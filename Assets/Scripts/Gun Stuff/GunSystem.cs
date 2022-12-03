@@ -59,7 +59,7 @@ public class GunSystem : MonoBehaviour
         }
         else
         {
-            text.color = new Color(1f, 1f, 1f, 1f);
+            text.color = new Color(0.1960784f, 0.1960784f, 0.1960f, 1.0f);
         }
         // update bullet num
         text.SetText(bulletsLeft + " / " + magazineSize);

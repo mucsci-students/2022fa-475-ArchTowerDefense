@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 5400000}
   - component: {fileID: 8200000}
+  - component: {fileID: 184451241}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: MainCamera
@@ -69,10 +70,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 5
-  m_RunSpeed: 10
+  m_WalkSpeed: 7
+  m_RunSpeed: 13
   m_RunstepLenghten: 0.7
-  m_JumpSpeed: 10
+  m_JumpSpeed: 12
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
@@ -90,6 +91,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  m_SoundMixer: {fileID: 24300002, guid: e4acea7940e34674385fe2352621cb3e, type: 2}
   crosshair: {fileID: 0}
   crosshairImages:
   - {fileID: 0}
@@ -213,6 +215,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!135 &184451241
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -281,7 +296,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 6839
+    m_Bits: 7095
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -451,7 +466,7 @@ Transform:
   m_GameObject: {fileID: 367897217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 400000}
@@ -473,7 +488,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367897217}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -516,7 +531,7 @@ SphereCollider:
   m_GameObject: {fileID: 367897217}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -545,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128136477}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -583,7 +598,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3584
+    m_Bits: 3840
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 2f89d086f7ddceb4891ccc5b2c13902e, type: 2}
   m_TargetDisplay: 0
@@ -658,10 +673,10 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 1712323150}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  groundImpact: {fileID: 0}
-  enemyImpact: {fileID: 0}
-  turretImpact: {fileID: 0}
-  defaultImpact: {fileID: 0}
+  groundImpact: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  enemyImpact: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  turretImpact: {fileID: 1067536016464596, guid: 57e18706e2792ff4bb5561ed74b796e2, type: 3}
+  defaultImpact: {fileID: 1198663731479534, guid: b46264f9e12caed4cb53e7c2ad64aa54, type: 3}
   text: {fileID: 0}
 --- !u!95 &322489523
 Animator:
@@ -746,10 +761,10 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 1567553966862885234}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  groundImpact: {fileID: 0}
-  enemyImpact: {fileID: 0}
-  turretImpact: {fileID: 0}
-  defaultImpact: {fileID: 0}
+  groundImpact: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  enemyImpact: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  turretImpact: {fileID: 1067536016464596, guid: 57e18706e2792ff4bb5561ed74b796e2, type: 3}
+  defaultImpact: {fileID: 1198663731479534, guid: b46264f9e12caed4cb53e7c2ad64aa54, type: 3}
   text: {fileID: 0}
 --- !u!95 &231823188
 Animator:
@@ -761,7 +776,7 @@ Animator:
   m_GameObject: {fileID: 1567553966862885234}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 75128f49358376f34a6426f31ef5186a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0c7b75c66b49d02c58b7bd04299901d8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -865,10 +880,10 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 3107650832136577206}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  groundImpact: {fileID: 0}
-  enemyImpact: {fileID: 0}
-  turretImpact: {fileID: 0}
-  defaultImpact: {fileID: 0}
+  groundImpact: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  enemyImpact: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  turretImpact: {fileID: 1067536016464596, guid: 57e18706e2792ff4bb5561ed74b796e2, type: 3}
+  defaultImpact: {fileID: 1198663731479534, guid: b46264f9e12caed4cb53e7c2ad64aa54, type: 3}
   text: {fileID: 0}
 --- !u!95 &1910614892
 Animator:
@@ -1015,10 +1030,10 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 4946234942908026269}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  groundImpact: {fileID: 0}
-  enemyImpact: {fileID: 0}
-  turretImpact: {fileID: 0}
-  defaultImpact: {fileID: 0}
+  groundImpact: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  enemyImpact: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  turretImpact: {fileID: 1067536016464596, guid: 57e18706e2792ff4bb5561ed74b796e2, type: 3}
+  defaultImpact: {fileID: 1198663731479534, guid: b46264f9e12caed4cb53e7c2ad64aa54, type: 3}
   text: {fileID: 0}
 --- !u!95 &1660585245
 Animator:
@@ -1216,11 +1231,11 @@ MonoBehaviour:
     m_Bits: 2048
   Gun: {fileID: 8914949156016660408}
   muzzleFlash: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23, type: 3}
-  groundImpact: {fileID: 0}
-  enemyImpact: {fileID: 0}
-  turretImpact: {fileID: 0}
-  defaultImpact: {fileID: 0}
-  text: {fileID: 2100000, guid: e7da7b441754945419f9ea4cd5e4c0ed, type: 2}
+  groundImpact: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  enemyImpact: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+  turretImpact: {fileID: 1067536016464596, guid: 57e18706e2792ff4bb5561ed74b796e2, type: 3}
+  defaultImpact: {fileID: 1198663731479534, guid: b46264f9e12caed4cb53e7c2ad64aa54, type: 3}
+  text: {fileID: 0}
 --- !u!95 &1156019644
 Animator:
   serializedVersion: 4
