@@ -25,6 +25,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public GameObject gunMenuUI;
 
+        public bool inMenu = false;
+
         public void Init(Transform character, Transform camera)
         {
             m_CharacterTargetRot = character.localRotation;

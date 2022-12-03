@@ -19,7 +19,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
-        [SerializeField] private MouseLook m_MouseLook;
+        [SerializeField] public MouseLook m_MouseLook;
         [SerializeField] private float m_StepInterval;
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
@@ -86,6 +86,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            if (m_MouseLook.pauseMenuUI.activeSelf == true || m_MouseLook.turretMenuUI.activeSelf == true || m_MouseLook.gunMenuUI.activeSelf == true)
+            {
+                m_MouseLook.inMenu = true;
+            } else 
+            {
+                m_MouseLook.inMenu = false;
+            }
             
         }
 
