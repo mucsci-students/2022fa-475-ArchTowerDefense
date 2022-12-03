@@ -20,6 +20,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
 
+        public GameObject pauseMenuUI;
+        public GameObject turretMenuUI;
+
+        public GameObject gunMenuUI;
+
         public void Init(Transform character, Transform camera)
         {
             m_CharacterTargetRot = character.localRotation;
@@ -74,6 +79,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void InternalLockUpdate()
         {
+            // This is supposed to unlock the mouse while in a menu
+            if(pauseMenuUI.activeSelf == true || turretMenuUI.activeSelf == true || gunMenuUI.activeSelf == true)
+            {
+                m_cursorIsLocked = false;
+            }
             if(Input.GetKeyUp(KeyCode.Escape))
             {
                 m_cursorIsLocked = false;
