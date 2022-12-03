@@ -92,12 +92,7 @@ public class TurretFoundation : MonoBehaviour
             // Exiting the menu
             } else if (Input.GetKeyDown(KeyCode.E) && inMenu)
             {
-                Cursor.visible = false;
-
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.lockState = CursorLockMode.Confined;
-
-                turretBuyMenu.gameObject.SetActive(false);
+                turretBuyMenu.GetComponent<TurretBuySystem>().HideBuyTurretMenu();
                 inMenu = false;
             }
 
