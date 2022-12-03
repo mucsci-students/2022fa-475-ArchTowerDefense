@@ -26,6 +26,7 @@ public class TurretFoundation : MonoBehaviour
     // So that while in a menu, the prompts dont show up
     // move this to FPS controller to acces from other things??
     public bool inMenu = false;
+    private bool playerInRange = false;
 
     // prices of each upgrade will scale off of the base price 
     // private int miniGunPrice = 0;
@@ -41,59 +42,48 @@ public class TurretFoundation : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
+        isTurretBuilt();
 
-        // If the player is close enough to the foundation to build...
-        if (distanceToPlayer <= buildRange)
+        if (playerInRange)
         {
-
-            // check if there is a turret placed
-            isTurretBuilt();
-           
-            // Key Press Prompts
+            // Update Prompts
             if (!inMenu)
             {
-                // Is there already a turret there?
-                if (!isTurretBuilt()) 
+                if (!isTurretBuilt())
                 {
-                    buyText.gameObject.SetActive(true);
+                    PromptBuy();
                 }
                 // Occupied, prompt to sell or upgrade
                 else
                 {
-                    int sellPrice = 1000;
-                    sellText.SetText("Press Q To Sell  +" + sellPrice);
-
-                    int upgradePrice = 3000;
-                    upgradeText.SetText("Press E To Upgrade -" + upgradePrice);
-                    
-                    upgradeText.gameObject.SetActive(true);
-                    sellText.gameObject.SetActive(true);
-
+                    PromptUpSell();
                 }
+            } else
+            {
+                // No prompts in menus
+                PromptClear();
             }
+
 
             // Buy Turret Menu or Upgrade
             if (Input.GetKeyDown(KeyCode.E) && !inMenu)
             {
-                if (!isTurretBuilt()) {
-                    inMenu = true;
-
+                if (!isTurretBuilt())
+                {
                     // Make the buy menu active
                     turretBuyMenu.GetComponent<TurretBuySystem>().ShowBuyTurretMenu(this.gameObject);
-
                 }
-
                 // Else upgrade to the next version
                 else if (transform.GetChild(1).GetComponent<Turret>().nextStage != null)
                 {
                     UpgradeTurret();
                 }
 
-            // Exiting the menu
-            } else if (Input.GetKeyDown(KeyCode.E) && inMenu)
+                // Exiting the menu
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && inMenu)
             {
                 turretBuyMenu.GetComponent<TurretBuySystem>().HideBuyTurretMenu();
-                inMenu = false;
             }
 
 
@@ -106,13 +96,58 @@ public class TurretFoundation : MonoBehaviour
                     SellTurret();
                 }
             }
-        } else {
-            // When they're not in range the prompts should go away
-            buyText.gameObject.SetActive(false);
-            upgradeText.gameObject.SetActive(false);
-            sellText.gameObject.SetActive(false);
+        }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("MainCamera"))
+        {
+            playerInRange = true;
 
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("MainCamera"))
+        {
+            playerInRange = false;
+
+            // When they're not in range the prompts should go away
+            PromptClear();
+
+        }
+    }
+
+    private void PromptBuy()
+    {
+        buyText.gameObject.SetActive(true);
+        upgradeText.gameObject.SetActive(false);
+        sellText.gameObject.SetActive(false);
+
+    }
+
+    private void PromptUpSell()
+    {
+        int sellPrice = 1000;
+        sellText.SetText("Press Q To Sell  +" + sellPrice);
+
+        int upgradePrice = 3000;
+        upgradeText.SetText("Press E To Upgrade -" + upgradePrice);
+
+        upgradeText.gameObject.SetActive(true);
+        sellText.gameObject.SetActive(true);
+        buyText.gameObject.SetActive(false);
+
+    }
+
+    private void PromptClear()
+    {
+        buyText.gameObject.SetActive(false);
+        upgradeText.gameObject.SetActive(false);
+        sellText.gameObject.SetActive(false);
     }
 
     bool isTurretBuilt()
@@ -160,7 +195,7 @@ public class TurretFoundation : MonoBehaviour
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
 
-        var builtTurret = Instantiate(flamethrowerTurret, transform.position,  transform.rotation);
+        var builtTurret = Instantiate(flamethrowerTurret, transform.position, transform.rotation);
         builtTurret.transform.SetParent(transform);
         builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
     }
@@ -170,7 +205,7 @@ public class TurretFoundation : MonoBehaviour
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
 
-        var builtTurret = Instantiate(slowdownTurret, transform.position,  transform.rotation);
+        var builtTurret = Instantiate(slowdownTurret, transform.position, transform.rotation);
         builtTurret.transform.SetParent(transform);
         builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
     }

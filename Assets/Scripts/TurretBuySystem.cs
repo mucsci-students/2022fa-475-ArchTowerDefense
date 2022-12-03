@@ -17,17 +17,18 @@ public class TurretBuySystem : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
         buyTurretMenu.gameObject.SetActive(true);
+        turretPlatform.GetComponent<TurretFoundation>().inMenu = true;
     }
 
     public void HideBuyTurretMenu()
     {
-
         Cursor.visible = false;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.lockState = CursorLockMode.Confined;
 
         buyTurretMenu.gameObject.SetActive(false);
+        turretPlatform.GetComponent<TurretFoundation>().inMenu = false;
 
     }
     public void buyMini()

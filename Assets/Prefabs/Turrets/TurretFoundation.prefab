@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 7350343790376597919}
   - component: {fileID: 7737108988409634325}
   - component: {fileID: 7993699284867034380}
+  - component: {fileID: 2043151695}
   m_Layer: 9
   m_Name: TurretFoundation
   m_TagString: Untagged
@@ -215,6 +216,8 @@ MonoBehaviour:
   sellText: {fileID: 0}
   buyText: {fileID: 0}
   upgradeText: {fileID: 0}
+  turretBuyMenu: {fileID: 0}
+  inMenu: 0
 --- !u!208 &7993699284867034380
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -231,3 +234,16 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!135 &2043151695
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7350343790376597889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

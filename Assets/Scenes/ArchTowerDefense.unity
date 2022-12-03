@@ -4013,10 +4013,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2011615553}
     - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
       propertyPath: upgradeText
       value: 
       objectReference: {fileID: 80357858}
@@ -10761,10 +10757,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2011615553}
     - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
       propertyPath: upgradeText
       value: 
       objectReference: {fileID: 80357858}
@@ -11984,10 +11976,6 @@ PrefabInstance:
       propertyPath: sellText
       value: 
       objectReference: {fileID: 2011615553}
-    - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
       propertyPath: upgradeText
       value: 
@@ -15076,10 +15064,6 @@ PrefabInstance:
       propertyPath: sellText
       value: 
       objectReference: {fileID: 2011615553}
-    - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
       propertyPath: upgradeText
       value: 
@@ -29014,10 +28998,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2011615553}
     - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
       propertyPath: upgradeText
       value: 
       objectReference: {fileID: 80357858}
@@ -40381,10 +40361,6 @@ PrefabInstance:
       propertyPath: sellText
       value: 
       objectReference: {fileID: 2011615553}
-    - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
       propertyPath: upgradeText
       value: 
@@ -77628,10 +77604,6 @@ PrefabInstance:
       propertyPath: sellText
       value: 
       objectReference: {fileID: 2011615553}
-    - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7737108988409634325, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
       propertyPath: upgradeText
       value: 
