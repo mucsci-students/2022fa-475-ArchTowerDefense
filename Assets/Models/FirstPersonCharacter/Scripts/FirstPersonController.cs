@@ -65,6 +65,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            // Are we in a menu right now?
+            if (m_MouseLook.pauseMenuUI.activeSelf == true || m_MouseLook.turretMenuUI.activeSelf == true || m_MouseLook.gunMenuUI.activeSelf == true)
+            {
+                m_MouseLook.inMenu = true;
+            } else 
+            {
+                m_MouseLook.inMenu = false;
+            }
+
+            if (!m_MouseLook.inMenu)
+            {
             float speed;
             GetInput(out speed);
             RotateView();
@@ -86,13 +97,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
-
-            if (m_MouseLook.pauseMenuUI.activeSelf == true || m_MouseLook.turretMenuUI.activeSelf == true || m_MouseLook.gunMenuUI.activeSelf == true)
-            {
-                m_MouseLook.inMenu = true;
-            } else 
-            {
-                m_MouseLook.inMenu = false;
             }
             
         }

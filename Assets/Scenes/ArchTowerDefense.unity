@@ -41824,6 +41824,42 @@ PrefabInstance:
       propertyPath: m_text
       value: Kalashnikov
       objectReference: {fileID: 0}
+    - target: {fileID: 1003503059, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003503059, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049106608, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049106608, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154816220684656153, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417611584272831126, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417611584272831126, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979308956347667, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979308956347667, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2882979309229035883, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -41919,6 +41955,30 @@ PrefabInstance:
     - target: {fileID: 2882979310449842709, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763021688930972359, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387772157145641194, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899571342080297226, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899571342080297226, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917767045861530716, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917767045861530716, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}

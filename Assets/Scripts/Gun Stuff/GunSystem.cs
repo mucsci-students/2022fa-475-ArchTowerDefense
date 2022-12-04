@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine;
 using TMPro;
 
@@ -51,7 +52,14 @@ public class GunSystem : MonoBehaviour
 
     private void Update()
     {
-        MyInput();
+        // NO SHOOTING IN MENUS
+        Transform player = Gun.transform.parent.parent.parent;
+        FirstPersonController fps = player.GetComponent<FirstPersonController>();
+        if (!fps.m_MouseLook.inMenu)
+        {
+            MyInput();
+        }
+       
 
         if(bulletsLeft < (.25 * magazineSize))
         {
