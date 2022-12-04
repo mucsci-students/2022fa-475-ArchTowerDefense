@@ -82,15 +82,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void InternalLockUpdate()
         {
             // This is supposed to unlock the mouse while in a menu
-            if(pauseMenuUI.activeSelf == true || turretMenuUI.activeSelf == true || gunMenuUI.activeSelf == true)
+            if (pauseMenuUI.activeSelf == true || turretMenuUI.activeSelf == true || gunMenuUI.activeSelf == true)
             {
                 m_cursorIsLocked = false;
             }
-            else if(Input.GetKeyUp(KeyCode.Escape))
+            else if (Input.GetKeyUp(KeyCode.Escape))
             {
                 m_cursorIsLocked = false;
             }
-            else if(Input.GetMouseButtonUp(0))
+            else if (Input.GetMouseButtonUp(0))
             {
                 m_cursorIsLocked = true;
             }
