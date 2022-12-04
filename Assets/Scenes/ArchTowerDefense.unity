@@ -41820,6 +41820,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 184451250}
+    - target: {fileID: 649365148, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: Kalashnikov
+      objectReference: {fileID: 0}
     - target: {fileID: 2882979309229035883, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -41906,6 +41910,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882979309229035887, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309917254134, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979310449842709, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
