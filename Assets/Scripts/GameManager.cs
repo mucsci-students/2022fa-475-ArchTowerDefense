@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour {
 
 	public static bool GameIsOver;
 
+	public GameObject arch;
 	public GameObject gameOverUI;
 	public GameObject completeLevelUI;
 
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour {
 			return;
 		}
 
-		if (PlayerStats.Lives <= 0)
+		if (arch.GetComponent<Arch>().GetHealth() <= 0)
 		{
 			EndGame();
 		}

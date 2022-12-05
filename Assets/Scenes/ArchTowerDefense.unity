@@ -35250,7 +35250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370665175930721977, guid: d0329f7d2e9d3ff4c8a0abd462dd43da, type: 3}
       propertyPath: m_Name
-      value: Restart Button
+      value: RestartButton
       objectReference: {fileID: 0}
     - target: {fileID: 4370665175930721979, guid: d0329f7d2e9d3ff4c8a0abd462dd43da, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -49990,7 +49990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370665175930721977, guid: d0329f7d2e9d3ff4c8a0abd462dd43da, type: 3}
       propertyPath: m_Name
-      value: Quit Button
+      value: QuitButton
       objectReference: {fileID: 0}
     - target: {fileID: 4370665175930721979, guid: d0329f7d2e9d3ff4c8a0abd462dd43da, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -56195,6 +56195,25 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.164, y: 0.048, z: 0.15300001}
   m_TimeToStationary: 0.5
+--- !u!1 &1609838639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8848378939081654191, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
+  m_PrefabInstance: {fileID: 2796953270111745212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1609838646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609838639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b329a567329f5f418872c4422fc1c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 100
+  healthBar: {fileID: 72837464}
 --- !u!4 &1610342975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 751fa7fc3202362499c2331741e4d11a, type: 3}
@@ -77244,7 +77263,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arch
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1058453802802379646, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
 --- !u!1001 &8744569632572705019
 PrefabInstance:

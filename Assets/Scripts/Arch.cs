@@ -25,6 +25,11 @@ public class Arch : MonoBehaviour
             healthBar.GetComponent<Slider>().value = health / startHealth;
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     public void TakeDamage(float amount)
     {
         health -= amount;
