@@ -111,6 +111,21 @@ public class Enemy : MonoBehaviour
 		{
 			GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
 			Destroy(effect, 5f);
+
+			Collider[] hitColliders = Physics.OverlapSphere(transform.position, 3f);
+
+			foreach (Collider col in hitColliders)
+			{
+				if (col.gameObject.CompareTag("Arch"))
+				{
+					col.gameObject.GetComponent<Arch>().TakeDamage(10);
+				}
+				else if (col.gameObject.CompareTag("Enemy"))
+				{
+					col.gameObject.GetComponent<Enemy>().TakeDamage(10);
+				}
+			}
+
 			Destroy(gameObject);
 			GetComponent<AudioSource>().Play();
 		}
