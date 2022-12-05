@@ -6412,6 +6412,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &184451255
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184451235}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &185900789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef7fcd2ae9b242742a93ca8d9e3342fd, type: 3}
@@ -15129,6 +15143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bf5b9b70d005b40b70c0fd56f05cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arch: {fileID: 1609838639}
   gameOverUI: {fileID: 1090653310}
   completeLevelUI: {fileID: 346208348}
 --- !u!4 &470729006
@@ -32987,9 +33002,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 979208131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df6a060e08a48dd44af8354d354ef461, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fa0567a2079aff449fde0270f142541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBetweenWaves: 5
+  waveCountdownText: {fileID: 0}
+  gameManager: {fileID: 470729005}
 --- !u!1 &980750078 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fb5b7d91905b184488438b4ba526c1fe, type: 3}
@@ -39298,13 +39316,21 @@ PrefabInstance:
       propertyPath: crosshairImages.Array.data[4]
       value: 
       objectReference: {fileID: 2029283827}
+    - target: {fileID: 184451241, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 184451241, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 231823189, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: text
       value: 
       objectReference: {fileID: 1128822637}
     - target: {fileID: 231823189, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: damage
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 231823189, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: fireSfx
@@ -39314,6 +39340,14 @@ PrefabInstance:
       propertyPath: reloadSfx
       value: 
       objectReference: {fileID: 8300000, guid: c4f24bb3e1531b44796fc33c46287cea, type: 3}
+    - target: {fileID: 367897219, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 367897219, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1156019645, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: text
       value: 
@@ -39331,6 +39365,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1128822637}
     - target: {fileID: 1660585246, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: range
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660585246, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: damage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660585246, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: fireSfx
       value: 
       objectReference: {fileID: 8300000, guid: b221d956d884e46438a00ded0c2a8085, type: 3}
@@ -39338,6 +39380,14 @@ PrefabInstance:
       propertyPath: reloadSfx
       value: 
       objectReference: {fileID: 8300000, guid: 5fe71794958af0c4e8238336c5fd0994, type: 3}
+    - target: {fileID: 1660585246, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: allowButtonHold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660585246, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: timeBetweenShooting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1712323152, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: text
       value: 
