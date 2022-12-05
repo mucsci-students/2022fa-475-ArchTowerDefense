@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 			return;
 		}
 
-		if (arch.GetComponent<Arch>().GetHealth() <= 0)
+		if (arch == null)
 		{
 			EndGame();
 		}

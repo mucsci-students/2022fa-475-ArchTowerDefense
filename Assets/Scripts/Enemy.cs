@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Camera cam;
 	private Animator anim;
+	private GameManager gameManager;
 	public float startSpeed = 10f;
 	public float burnRecover = 1f;
 
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour
 	public float speed;
 
 	public float startHealth = 100;
+	public float attack = 1;
 	private float health;
 	private float burning = 0;
 
@@ -29,6 +31,7 @@ public class Enemy : MonoBehaviour
 	void Start ()
 	{
         cam = Camera.main;
+		gameManager = FindObjectOfType<GameManager>();
 		anim = GetComponent<Animator>();
 
 		gameObject.layer = LayerMask.NameToLayer("Enemies");
@@ -139,6 +142,12 @@ public class Enemy : MonoBehaviour
 		GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(effect, 5f);
 		Destroy(gameObject);
+	}
+
+	public void DamageArch()
+	{
+		if (gameManager.arch != null)
+			gameManager.arch.GetComponent<Arch>().TakeDamage(attack);
 	}
 
     //private void OnBecameVisible()

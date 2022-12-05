@@ -66,7 +66,14 @@ public class EnemyMovement : MonoBehaviour {
 			Destroy(gameObject);
 		}
 		else
-			GetComponent<Animator>().SetTrigger("attack");
+		{
+			GetComponent<Animator>().SetTrigger("attack");	
+			InvokeRepeating("DamageArch", 0f, 1f);
+		}
 	}
 
+	void DamageArch()
+	{
+		enemy.GetComponent<Enemy>().DamageArch();
+	}
 }

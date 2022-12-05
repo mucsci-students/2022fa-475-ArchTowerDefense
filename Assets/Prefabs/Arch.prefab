@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7046793883521244794}
   - component: {fileID: 6480255306189403382}
   - component: {fileID: 8505795642524348459}
-  - component: {fileID: 1058453802802379646}
+  - component: {fileID: 7201606769391505878}
   m_Layer: 0
   m_Name: Arch
   m_TagString: Untagged
@@ -123,8 +123,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8848378939081654191}
   m_LocalRotation: {x: 0.00000006717942, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.49, z: 150}
-  m_LocalScale: {x: 200, y: 200.00003, z: 200.00003}
+  m_LocalPosition: {x: 0, y: 8, z: 150}
+  m_LocalScale: {x: 700, y: 700, z: 700}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8505795642379836325}
@@ -216,7 +216,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1058453802802379646
+--- !u!114 &7201606769391505878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8848378939081654191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 287ee2be6dad6f9c4a4e8db87ff985a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b329a567329f5f418872c4422fc1c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100

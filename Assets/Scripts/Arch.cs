@@ -43,7 +43,6 @@ public class Arch : MonoBehaviour
     void Die()
     {
         isDead = true;
-
         Destroy(gameObject);
     }
 }
