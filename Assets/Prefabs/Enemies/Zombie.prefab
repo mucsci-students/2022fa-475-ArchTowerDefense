@@ -2107,8 +2107,8 @@ MonoBehaviour:
   startSpeed: 2
   burnRecover: 1
   speed: 0
-  startHealth: 500
-  worth: 50
+  startHealth: 200
+  worth: 100
   deathEffect: {fileID: 6101287044835023169, guid: 7cfac387b43c1a2419de780520b67cac, type: 3}
   healthBar: {fileID: 5679658313294252575}
   healthOffset: {x: 0, y: 2, z: 0}
