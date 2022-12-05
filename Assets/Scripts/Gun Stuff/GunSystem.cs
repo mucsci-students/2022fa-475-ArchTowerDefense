@@ -44,10 +44,15 @@ public class GunSystem : MonoBehaviour
 
     public TextMeshProUGUI text;
 
+    private AudioSource audio;
+    public AudioClip fireSfx;
+    public AudioClip reloadSfx;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -89,6 +94,8 @@ public class GunSystem : MonoBehaviour
         // Reloading
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
         {
+            audio.clip = reloadSfx;
+            audio.Play();
             Reload();
         }
 
@@ -96,6 +103,8 @@ public class GunSystem : MonoBehaviour
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
         {
             bulletsShot = bulletsPerTap;
+            audio.clip = fireSfx;
+            audio.Play();
             Shoot();
         }
     }
