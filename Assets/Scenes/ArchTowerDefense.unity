@@ -38445,6 +38445,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 635111480, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: the cutest weapon anyone could ask for
+      objectReference: {fileID: 0}
     - target: {fileID: 636799602, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: player
       value: 
@@ -38461,6 +38465,18 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1145182439, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216183577, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383417789, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 'do you really want to learn the hard way? '
+      objectReference: {fileID: 0}
     - target: {fileID: 2049106608, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_Maskable
       value: 0
@@ -38468,6 +38484,10 @@ PrefabInstance:
     - target: {fileID: 2049106608, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 121118886182442434, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2154816220684656153, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_Enabled
@@ -38481,6 +38501,18 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2882979308674729355, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: legend has it, this weapon killed mufassa
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979308875082645, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979308875572710, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: slows enemies with an icy beam
+      objectReference: {fileID: 0}
     - target: {fileID: 2882979308956347667, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_Maskable
       value: 0
@@ -38488,6 +38520,14 @@ PrefabInstance:
     - target: {fileID: 2882979308956347667, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309043019733, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: slowdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309187786349, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 2882979309229035883, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_Name
@@ -38577,9 +38617,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2882979309518272456, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309541972123, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: Cheap and simple shooter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309640330748, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: flamethrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309640330748, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_fontSize
+      value: 18.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309640330748, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309640330748, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309653347444, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309698146957, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309831770272, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: deals fire damage to enemies it locks onto
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309884654451, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: long range shooter
+      objectReference: {fileID: 0}
     - target: {fileID: 2882979309917254134, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979309961163851, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: Minigun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979310073785330, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: antipersonnel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979310073785330, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979310073785330, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882979310340956019, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 2882979310449842709, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_IsActive
@@ -38589,9 +38689,17 @@ PrefabInstance:
       propertyPath: m_CullTransparentMesh
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4266238501477502861, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: bigger pew pews
+      objectReference: {fileID: 0}
     - target: {fileID: 6387772157145641194, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_SizeDelta.x
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516738364851199048, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+      propertyPath: m_text
+      value: basic weapon to kill the undead
       objectReference: {fileID: 0}
     - target: {fileID: 6899571342080297226, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
       propertyPath: m_AnchorMax.x
@@ -77387,6 +77495,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 925296859}
+    - target: {fileID: 8744569632604444172, guid: 7b83da1be86b9f04b9a39896dabe3d26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8744569632712099480, guid: 7b83da1be86b9f04b9a39896dabe3d26, type: 3}
       propertyPath: m_RootOrder
       value: 6
