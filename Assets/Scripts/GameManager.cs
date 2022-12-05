@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour {
 
 	public static bool GameIsOver;
 
-	//public GameObject gameOverUI;
-	//public GameObject completeLevelUI;
+	public GameObject gameOverUI;
+	public GameObject completeLevelUI;
 
 	void Start ()
 	{
@@ -16,7 +16,10 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GameIsOver)
+		{
+			Time.timeScale = 0;
 			return;
+		}
 
 		if (PlayerStats.Lives <= 0)
 		{
@@ -27,13 +30,12 @@ public class GameManager : MonoBehaviour {
 	void EndGame ()
 	{
 		GameIsOver = true;
-		//gameOverUI.SetActive(true);
+		gameOverUI.SetActive(true);
 	}
 
 	public void WinLevel ()
 	{
 		GameIsOver = true;
-		//completeLevelUI.SetActive(true);
+		completeLevelUI.SetActive(true);
 	}
-
 }

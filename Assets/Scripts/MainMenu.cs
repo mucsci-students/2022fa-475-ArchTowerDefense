@@ -66,6 +66,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("ArchTowerDefense");
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void InfoScreenPage(int val)
     {
         // Back a page
