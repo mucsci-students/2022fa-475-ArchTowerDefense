@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
 
@@ -8,6 +9,9 @@ public class GameManager : MonoBehaviour {
 	public GameObject arch;
 	public GameObject gameOverUI;
 	public GameObject completeLevelUI;
+	public int totalTurrets = 15;
+	public int turretCount = 0;
+	public TextMeshProUGUI turretText;
 
 	void Start ()
 	{
@@ -16,6 +20,8 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		turretText.SetText(turretCount + " / " + totalTurrets);
+
 		if (GameIsOver)
 		{
 			Time.timeScale = 0;

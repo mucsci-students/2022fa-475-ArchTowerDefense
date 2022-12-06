@@ -33,6 +33,8 @@ public class TurretFoundation : MonoBehaviour
     private float sellPrice = 0;
     private float upgradePrice = 0;
 
+    private GameObject gameManager;
+    private GameManager gm;
     // prices of each upgrade will scale off of the base price 
     // private int miniGunPrice = 0;
     // private int flameThrowerPrice = 0;
@@ -44,6 +46,8 @@ public class TurretFoundation : MonoBehaviour
     void Start()
     {
         moneyBag = player.GetComponent<Currency>();
+        gameManager = GameObject.Find("GameManager");
+        gm = gameManager.GetComponent<GameManager>();
     }
 
 
@@ -81,7 +85,10 @@ public class TurretFoundation : MonoBehaviour
                 if (!isTurretBuilt())
                 {
                     // Make the buy menu active
-                    turretBuyMenu.GetComponent<TurretBuySystem>().ShowBuyTurretMenu(this.gameObject);
+                    if (gm.turretCount != gm.totalTurrets)
+                    {
+                        turretBuyMenu.GetComponent<TurretBuySystem>().ShowBuyTurretMenu(this.gameObject);
+                    }
                 }
                 // Else upgrade to the next version
                 else if (transform.GetChild(1).GetComponent<Turret>().nextStage != null)
@@ -136,6 +143,15 @@ public class TurretFoundation : MonoBehaviour
 
     private void PromptBuy()
     {
+        if (gm.turretCount == gm.totalTurrets)
+        {
+            buyText.SetText("Max turret placement reached!");
+        } else 
+        {
+            buyText.SetText("Press E to build");
+        }
+
+
         buyText.gameObject.SetActive(true);
         upgradeText.gameObject.SetActive(false);
         sellText.gameObject.SetActive(false);
@@ -203,6 +219,7 @@ public class TurretFoundation : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(true);
 
         turretLevel = 1;
+        gm.turretCount--;
     }
 
     public void BuildMiniGun()
@@ -210,7 +227,8 @@ public class TurretFoundation : MonoBehaviour
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
 
-        Debug.Log("Minigun");
+        gm.turretCount++;
+
         // Build a minigun turret if not there
         var builtTurret = Instantiate(minigunTurret, transform.position, transform.rotation);
         builtTurret.transform.SetParent(transform);
@@ -223,6 +241,8 @@ public class TurretFoundation : MonoBehaviour
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
 
+        gm.turretCount++;
+
         var builtTurret = Instantiate(flamethrowerTurret, transform.position, transform.rotation);
         builtTurret.transform.SetParent(transform);
         builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
@@ -233,6 +253,8 @@ public class TurretFoundation : MonoBehaviour
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
 
+        gm.turretCount++;
+
         var builtTurret = Instantiate(slowdownTurret, transform.position, transform.rotation);
         builtTurret.transform.SetParent(transform);
         builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
@@ -242,6 +264,8 @@ public class TurretFoundation : MonoBehaviour
     {
         //Remove the glowy
         transform.GetChild(0).gameObject.SetActive(false);
+
+        gm.turretCount++;
 
         var builtTurret = Instantiate(sniperTurret, transform.position, transform.rotation);
         builtTurret.transform.SetParent(transform);

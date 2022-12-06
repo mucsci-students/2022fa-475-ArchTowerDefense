@@ -26,11 +26,18 @@ public class Enemy : MonoBehaviour
     public GameObject healthBar;
     public Vector3 healthOffset;
 
+	private GameObject player;
+	private Currency moneyBag;
+
     private bool isDead = false;
 
 	void Start ()
 	{
         cam = Camera.main;
+
+		GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+		moneyBag = player[0].transform.GetComponent<Currency>();
+
 		gameManager = FindObjectOfType<GameManager>();
 		anim = GetComponent<Animator>();
 
@@ -99,6 +106,8 @@ public class Enemy : MonoBehaviour
 
 	void Die ()
 	{
+		moneyBag.addShekels(worth);
+		
 		isDead = true;
 		healthBar.SetActive(false);
 		gameObject.tag = "Dead";
