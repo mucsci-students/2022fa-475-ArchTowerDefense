@@ -14729,8 +14729,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'NEXT WAVE: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24692,8 +24692,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press F to call zoppetti to your location
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -56738,7 +56738,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8848378939081654191, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
   m_PrefabInstance: {fileID: 2796953270111745212}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1609838646
+--- !u!114 &1609838652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56750,9 +56750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b329a567329f5f418872c4422fc1c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 100
+  startHealth: 5000
+  health: 0
   healthBar: {fileID: 72837464}
-  protectLogo: {fileID: 0}
 --- !u!4 &1610342975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 751fa7fc3202362499c2331741e4d11a, type: 3}
@@ -59332,8 +59332,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press G to toggle the gun menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -75087,8 +75087,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press T to start next wave
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -78406,9 +78406,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arch
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1058453802802379646, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
-    - {fileID: 7201606769391505878, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
 --- !u!1001 &8744569632572705019
 PrefabInstance:

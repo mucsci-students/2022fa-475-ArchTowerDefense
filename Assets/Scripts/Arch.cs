@@ -5,15 +5,13 @@ using System.Collections;
 public class Arch : MonoBehaviour
 {
     [HideInInspector]
-    public float startHealth = 10;
+    public float startHealth = 5000;
     [Header("Health")]
-    private float health;
+    public float health;
     public GameObject healthBar;
 
     [Header("Statuses")]
     private bool isDead = false;
-
-    public AudioClip protectLogo;
 
     // Start is called before the first frame update
     void Start()
