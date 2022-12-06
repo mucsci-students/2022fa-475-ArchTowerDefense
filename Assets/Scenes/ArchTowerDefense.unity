@@ -39550,6 +39550,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2029283827}
     - target: {fileID: 184451260, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: shekels
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 184451260, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: moneyText
       value: 
       objectReference: {fileID: 669462194}

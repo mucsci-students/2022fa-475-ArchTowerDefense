@@ -43,6 +43,7 @@ public class TurretBuySystem : MonoBehaviour
         if (moneyBag.shekels >= 500)
         {
             moneyBag.purchase(500);
+            turretPlatform.GetComponent<TurretFoundation>().turretValue = 500;
             turretPlatform.GetComponent<TurretFoundation>().BuildMiniGun();
             HideBuyTurretMenu();
         }
@@ -53,6 +54,7 @@ public class TurretBuySystem : MonoBehaviour
         if (moneyBag.shekels >= 1000)
         {
             moneyBag.purchase(1000);
+            turretPlatform.GetComponent<TurretFoundation>().turretValue = 1000;
             turretPlatform.GetComponent<TurretFoundation>().BuildFlameThrower();
             HideBuyTurretMenu();
         }
@@ -63,6 +65,7 @@ public class TurretBuySystem : MonoBehaviour
         if (moneyBag.shekels >= 750)
         {
             moneyBag.purchase(750);
+            turretPlatform.GetComponent<TurretFoundation>().turretValue = 750;
             turretPlatform.GetComponent<TurretFoundation>().BuildSlowDown();
             HideBuyTurretMenu();
         }
@@ -73,6 +76,7 @@ public class TurretBuySystem : MonoBehaviour
         if (moneyBag.shekels >= 1500)
         {
             moneyBag.purchase(1500);
+            turretPlatform.GetComponent<TurretFoundation>().turretValue = 1500;
             turretPlatform.GetComponent<TurretFoundation>().BuildSniper();
             HideBuyTurretMenu();
         }

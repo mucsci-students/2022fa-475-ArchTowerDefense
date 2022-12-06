@@ -21,12 +21,17 @@ public class TurretFoundation : MonoBehaviour
 
     // How much the user has spent on this turret to upgrade it
     // Used to calculate sellback price
-    private int turretValue = 0;
+    public float turretValue = 0;
+    private int turretLevel = 1;
 
     // So that while in a menu, the prompts dont show up
     // move this to FPS controller to acces from other things??
     public bool inMenu = false;
     private bool playerInRange = false;
+    private Currency moneyBag;
+
+    private float sellPrice = 0;
+    private float upgradePrice = 0;
 
     // prices of each upgrade will scale off of the base price 
     // private int miniGunPrice = 0;
@@ -35,6 +40,11 @@ public class TurretFoundation : MonoBehaviour
     // private int slowDownPrice = 0;
     // private int sniperPrice = 0;
 
+
+    void Start()
+    {
+        moneyBag = player.GetComponent<Currency>();
+    }
 
 
     void Update()
@@ -76,7 +86,10 @@ public class TurretFoundation : MonoBehaviour
                 // Else upgrade to the next version
                 else if (transform.GetChild(1).GetComponent<Turret>().nextStage != null)
                 {
-                    UpgradeTurret();
+                    if (moneyBag.shekels >= upgradePrice)
+                    {
+                        UpgradeTurret();
+                    }
                 }
 
                 // Exiting the menu
@@ -131,11 +144,23 @@ public class TurretFoundation : MonoBehaviour
 
     private void PromptUpSell()
     {
-        int sellPrice = 1000;
+        sellPrice = turretValue / 2;
         sellText.SetText("Press Q To Sell  +" + sellPrice);
 
-        int upgradePrice = 3000;
+        if (turretLevel == 1)
+        {
+            upgradePrice = turretValue + 250;
+        }
+        else if (turretLevel == 2)
+        {
+            upgradePrice = turretValue * 2;
+        }
         upgradeText.SetText("Press E To Upgrade -" + upgradePrice);
+
+        if (turretLevel == 3)
+        {
+            upgradeText.SetText("Max upgrade level reached");
+        }
 
         upgradeText.gameObject.SetActive(true);
         sellText.gameObject.SetActive(true);
@@ -166,7 +191,8 @@ public class TurretFoundation : MonoBehaviour
 
     void SellTurret()
     {
-        // Play a noise?
+        // money
+        moneyBag.addShekels(sellPrice);
 
         // Remove the turret
         Destroy(transform.GetChild(1).gameObject);
@@ -175,6 +201,8 @@ public class TurretFoundation : MonoBehaviour
 
         //Replace the glowy
         transform.GetChild(0).gameObject.SetActive(true);
+
+        turretLevel = 1;
     }
 
     public void BuildMiniGun()
@@ -231,6 +259,8 @@ public class TurretFoundation : MonoBehaviour
         builtTurret.transform.SetParent(transform);
         Debug.Log("upgraded turret with the parent as " + transform);
         builtTurret.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+        turretLevel++;
+        turretValue = upgradePrice;
     }
 
     // Draws turret foundation's interactable distance in scene view
