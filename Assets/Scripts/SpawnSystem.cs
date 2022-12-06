@@ -37,10 +37,17 @@ public class SpawnSystem : MonoBehaviour
 
 		if (countdown <= 0f)
 		{
+            if((PlayerStats.Rounds / 3) < 6)
+                GameObject.Find("FPSController").GetComponent<Currency>().addShekels(500);
+            else
+                GameObject.Find("FPSController").GetComponent<Currency>().addShekels(1000);
+                
             inBuildPeriod = false;
             waveCountdownText.enabled = false;
             skipBuildText.enabled = false;
             gunPrompt.enabled = false;
+
+            
             foreach(Transform spawn in transform)
             {
 			    StartCoroutine(spawn.GetComponent<WaveSpawner>().SpawnWave());
@@ -65,6 +72,8 @@ public class SpawnSystem : MonoBehaviour
         skipBuildText.enabled = true;
         gunPrompt.enabled = true;
         waveCountdownText.text = "NEXT WAVE: " + string.Format("{0:0}", countdown);
+
+
 
     }
 }

@@ -39679,7 +39679,7 @@ PrefabInstance:
       objectReference: {fileID: 2029283827}
     - target: {fileID: 184451260, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: shekels
-      value: 500
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 184451260, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: moneyText
@@ -45916,40 +45916,40 @@ MonoBehaviour:
     count: 4
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 4
+    count: 15
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 1
+    count: 5
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 4
+    count: 13
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
-    count: 2
+    count: 5
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
-    count: 1
+    count: 7
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 6
+    count: 17
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
     count: 1
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
-    count: 10
+    count: 20
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 20
+    count: 43
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
     count: 1
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 30
+    count: 54
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
-    count: 20
+    count: 29
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 0
@@ -51686,43 +51686,43 @@ MonoBehaviour:
     count: 0
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 5
+    count: 15
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 8
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 3
+    count: 12
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 3
+    count: 16
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 2
+    count: 14
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
-    count: 3
+    count: 11
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
-    count: 1
+    count: 30
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
-    count: 1
+    count: 8
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 10
+    count: 11
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 20
+    count: 28
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
     count: 1
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 20
+    count: 39
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
-    count: 5
+    count: 12
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
     count: 0
@@ -66089,25 +66089,25 @@ MonoBehaviour:
     count: 3
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 8
+    count: 19
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 10
+    count: 35
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 1
+    count: 7
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 10
+    count: 34
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 3
+    count: 22
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 0
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 15
+    count: 18
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
     count: 1
@@ -66116,7 +66116,7 @@ MonoBehaviour:
     count: 15
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 20
+    count: 55
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
     count: 1
@@ -66125,7 +66125,7 @@ MonoBehaviour:
     count: 25
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
-    count: 20
+    count: 24
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 0
