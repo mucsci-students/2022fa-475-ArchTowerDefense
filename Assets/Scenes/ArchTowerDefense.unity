@@ -14718,8 +14718,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'NEXT WAVE: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24681,8 +24681,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press F to call zoppetti to your location
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -45894,20 +45894,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finished: 0
   waves:
-  - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 3
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 1
     rate: 1
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 2
-    rate: 2
-  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 3
     rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 4
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 4
+    rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
+    count: 1
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
+    count: 4
+    rate: 2
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 2
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 1
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
+    count: 6
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
+    count: 1
+    rate: 2
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+    count: 10
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 20
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
+    count: 1
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 30
+    rate: 2
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+    count: 20
     rate: 2
   waypoints: {fileID: 67577735}
   spawnPoint: {fileID: 1333983547}
@@ -51637,7 +51667,16 @@ MonoBehaviour:
     count: 1
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 2
+    count: 0
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 5
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 8
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
+    count: 3
     rate: 2
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 3
@@ -51646,7 +51685,28 @@ MonoBehaviour:
     count: 2
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+    count: 3
+    rate: 2
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 1
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
+    count: 1
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
+    count: 10
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 20
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
+    count: 1
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 20
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
+    count: 5
     rate: 2
   waypoints: {fileID: 1461332645}
   spawnPoint: {fileID: 1472787920}
@@ -59252,8 +59312,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press G to toggle the gun menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -66002,20 +66062,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finished: 0
   waves:
-  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 1
     rate: 5
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
-    count: 2
-    rate: 2
-  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 3
     rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 8
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 10
+    rate: 2
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 2
+    count: 1
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 10
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
+    count: 3
     rate: 2
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+    count: 0
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 15
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
     count: 1
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 15
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
+    count: 20
+    rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
+    count: 1
+    rate: 2
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+    count: 25
+    rate: 2
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+    count: 20
     rate: 2
   waypoints: {fileID: 1419212173}
   spawnPoint: {fileID: 1847545887}
@@ -74973,8 +75063,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press T to start next wave
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

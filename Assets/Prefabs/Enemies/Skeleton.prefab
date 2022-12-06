@@ -2269,7 +2269,7 @@ MonoBehaviour:
   burnRecover: 1
   speed: 0
   startHealth: 100
-  attack: 1
+  attack: 50
   worth: 50
   deathEffect: {fileID: 6101287044835023169, guid: 7cfac387b43c1a2419de780520b67cac, type: 3}
   healthBar: {fileID: 3675280755725392168}
