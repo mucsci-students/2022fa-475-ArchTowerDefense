@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SpawnSystem : MonoBehaviour
 {
 	public float timeBetweenWaves = 5f;
 	private float countdown = 2f;
 
-	public Text waveCountdownText;
+	public TMP_Text waveCountdownText;
 	public GameManager gameManager;
 
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class SpawnSystem : MonoBehaviour
 
 		if (countdown <= 0f)
 		{
+            waveCountdownText.enabled = false;
             foreach(Transform spawn in transform)
             {
 			    StartCoroutine(spawn.GetComponent<WaveSpawner>().SpawnWave());
@@ -39,6 +41,7 @@ public class SpawnSystem : MonoBehaviour
 		countdown -= Time.deltaTime;
 		countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
         
-		//waveCountdownText.text = string.Format("{0:00.00}", countdown);
+        waveCountdownText.enabled = true;
+        waveCountdownText.text = "NEXT WAVE: " + string.Format("{0:00.00}", countdown);
     }
 }

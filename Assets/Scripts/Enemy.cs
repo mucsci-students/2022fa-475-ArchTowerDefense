@@ -107,7 +107,6 @@ public class Enemy : MonoBehaviour
 
 		PlayerStats.Money += worth;
 
-		--WaveSpawner.EnemiesAlive;
 		anim.SetTrigger("dead");
 
 		if (transform.Find("Bomb"))

@@ -55,7 +55,6 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		reachedEnd = true;
 		PlayerStats.Lives--;
-		WaveSpawner.EnemiesAlive--;
 
 		GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 

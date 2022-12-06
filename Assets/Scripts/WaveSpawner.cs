@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour {
 
-	public static int EnemiesAlive = 0;
 	public bool finished = true;
 
 	public Wave[] waves;
@@ -18,7 +17,7 @@ public class WaveSpawner : MonoBehaviour {
 
 	void Update ()
 	{
-		if (EnemiesAlive > 0)
+		if (transform.childCount != 0)
 		{
 			return;
 		}
@@ -39,8 +38,6 @@ public class WaveSpawner : MonoBehaviour {
 
 		Wave wave = waves[waveIndex];
 
-		EnemiesAlive = wave.count;
-
 		for (int i = 0; i < wave.count; i++)
 		{
 			SpawnEnemy(wave.enemy);
@@ -54,6 +51,7 @@ public class WaveSpawner : MonoBehaviour {
 	{
 		var enemyInst = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
 		enemyInst.GetComponent<EnemyMovement>().waypoints = waypoints;
+		enemyInst.transform.SetParent(transform);
 	}
 
 }
