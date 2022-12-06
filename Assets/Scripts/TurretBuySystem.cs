@@ -9,6 +9,13 @@ public class TurretBuySystem : MonoBehaviour
     public GameObject buyTurretMenu;
     private GameObject turretPlatform;
 
+    public GameObject player;
+    private Currency moneyBag;
+
+    void Update()
+    {
+        moneyBag = player.GetComponent<Currency>();
+    }
     public void ShowBuyTurretMenu(GameObject platform)
     {
         turretPlatform = platform;
@@ -33,25 +40,41 @@ public class TurretBuySystem : MonoBehaviour
     }
     public void buyMini()
     {
-        turretPlatform.GetComponent<TurretFoundation>().BuildMiniGun();
-        HideBuyTurretMenu();
+        if (moneyBag.shekels >= 500)
+        {
+            moneyBag.purchase(500);
+            turretPlatform.GetComponent<TurretFoundation>().BuildMiniGun();
+            HideBuyTurretMenu();
+        }
     }
 
     public void buyFlame()
     {
-        turretPlatform.GetComponent<TurretFoundation>().BuildFlameThrower();
-        HideBuyTurretMenu();
+        if (moneyBag.shekels >= 1000)
+        {
+            moneyBag.purchase(1000);
+            turretPlatform.GetComponent<TurretFoundation>().BuildFlameThrower();
+            HideBuyTurretMenu();
+        }
     }
 
     public void buySlow()
     {
-        turretPlatform.GetComponent<TurretFoundation>().BuildSlowDown();
-        HideBuyTurretMenu();
+        if (moneyBag.shekels >= 750)
+        {
+            moneyBag.purchase(750);
+            turretPlatform.GetComponent<TurretFoundation>().BuildSlowDown();
+            HideBuyTurretMenu();
+        }
     }
 
     public void buySnipe()
     {
-        turretPlatform.GetComponent<TurretFoundation>().BuildSniper();
-        HideBuyTurretMenu();
+        if (moneyBag.shekels >= 1500)
+        {
+            moneyBag.purchase(1500);
+            turretPlatform.GetComponent<TurretFoundation>().BuildSniper();
+            HideBuyTurretMenu();
+        }
     }
 }
