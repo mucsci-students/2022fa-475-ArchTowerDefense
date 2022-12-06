@@ -13,7 +13,8 @@ public class WaveSpawner : MonoBehaviour {
 
 	public GameManager gameManager;
 
-	private int waveIndex = 0;
+	[HideInInspector]
+	public int waveIndex = 0;
 
 	void Update ()
 	{
@@ -24,7 +25,12 @@ public class WaveSpawner : MonoBehaviour {
 
 		finished = true;
 
-		if (waveIndex == waves.Length)
+		// if (waveIndex == waves.Length)
+		// {
+		// 	gameManager.WinLevel();
+		// 	this.enabled = false;
+		// }
+		if((PlayerStats.Rounds / 3) == 16)
 		{
 			gameManager.WinLevel();
 			this.enabled = false;

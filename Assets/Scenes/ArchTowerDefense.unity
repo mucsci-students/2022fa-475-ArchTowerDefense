@@ -10087,6 +10087,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7350343790376597888, guid: 9a7d966de63cf794686ea23daad48cf9, type: 3}
   m_PrefabInstance: {fileID: 305226060}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &306099541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4625936839282185602, guid: 371f920cc4dd80546b9c5b9b75deccdf, type: 3}
+  m_PrefabInstance: {fileID: 1128822636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &306576097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e59335cfbb18664095d9da13fc0ed37, type: 3}
@@ -33064,6 +33075,7 @@ MonoBehaviour:
   waveCountdownText: {fileID: 439691820}
   skipBuildText: {fileID: 2059281985}
   gunPrompt: {fileID: 1680178829}
+  currentWave: {fileID: 306099541}
   gameManager: {fileID: 470729005}
   inBuildPeriod: 0
 --- !u!1 &980750078 stripped
@@ -45939,9 +45951,13 @@ MonoBehaviour:
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 20
     rate: 2
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+    count: 0
+    rate: 2
   waypoints: {fileID: 67577735}
   spawnPoint: {fileID: 1333983547}
   gameManager: {fileID: 470729005}
+  waveIndex: 0
 --- !u!1001 &1334497393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51708,9 +51724,13 @@ MonoBehaviour:
   - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
     count: 5
     rate: 2
+  - enemy: {fileID: 8351005599831475708, guid: 4b63d827dee587446b14a37ebf40f730, type: 3}
+    count: 0
+    rate: 2
   waypoints: {fileID: 1461332645}
   spawnPoint: {fileID: 1472787920}
   gameManager: {fileID: 470729005}
+  waveIndex: 0
 --- !u!4 &1472912148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0420f0db969f0ed4d82bc9f10a73164f, type: 3}
@@ -66107,9 +66127,13 @@ MonoBehaviour:
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
     count: 20
     rate: 2
+  - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
+    count: 0
+    rate: 2
   waypoints: {fileID: 1419212173}
   spawnPoint: {fileID: 1847545887}
   gameManager: {fileID: 470729005}
+  waveIndex: 0
 --- !u!1001 &1848576127
 PrefabInstance:
   m_ObjectHideFlags: 0

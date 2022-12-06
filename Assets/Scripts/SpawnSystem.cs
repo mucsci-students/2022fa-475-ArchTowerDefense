@@ -12,6 +12,7 @@ public class SpawnSystem : MonoBehaviour
 	public TMP_Text waveCountdownText;
     public TMP_Text skipBuildText;
     public TMP_Text gunPrompt;
+    public TMP_Text currentWave;
 	public GameManager gameManager;
 
     public bool inBuildPeriod = false;
@@ -25,6 +26,7 @@ public class SpawnSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentWave.SetText((PlayerStats.Rounds/3)+" / 15");
         foreach(Transform spawn in transform)
         {
             if (!spawn.GetComponent<WaveSpawner>().finished)
@@ -42,6 +44,7 @@ public class SpawnSystem : MonoBehaviour
             foreach(Transform spawn in transform)
             {
 			    StartCoroutine(spawn.GetComponent<WaveSpawner>().SpawnWave());
+
             }
 			countdown = timeBetweenWaves;
 			return;
