@@ -82,7 +82,7 @@ public class Zoppetti : MonoBehaviour
         // gameObject.GetComponent<Animator>().Play("Zoop.Idle");
         if(agent.transform.position == agent.destination)
         {
-            Debug.Log("Arrived");
+            // Debug.Log("Arrived");
             gameObject.GetComponent<Animator>().Play("Zoop.Idle");
         }
 

@@ -8,6 +8,9 @@ public class SpawnSystem : MonoBehaviour
 	public float timeBetweenWaves = 5f;
 	private float countdown = 2f;
 
+    public WaveSpawner[] spawners;
+    private int spawnIndex = 0;
+
 	public Text waveCountdownText;
 	public GameManager gameManager;
 
@@ -22,9 +25,12 @@ public class SpawnSystem : MonoBehaviour
     {
         foreach(Transform spawn in transform)
         {
+            Debug.Log(spawn.GetComponent<WaveSpawner>().finished);
             if (!spawn.GetComponent<WaveSpawner>().finished)
                 return;
         }
+
+        
 
 		if (countdown <= 0f)
 		{

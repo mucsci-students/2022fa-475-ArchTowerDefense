@@ -767,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 2848351140432748758, guid: f6258886a958fbd4cb9dd8f3c878ff12, type: 3}
     - target: {fileID: 1834520368, guid: c0c5b7d4086cb6e4ea7873a31791aff4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1834520371, guid: c0c5b7d4086cb6e4ea7873a31791aff4, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -33055,6 +33055,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenWaves: 5
+  spawners:
+  - {fileID: 1472787921}
+  - {fileID: 1333983548}
+  - {fileID: 1847545888}
   waveCountdownText: {fileID: 0}
   gameManager: {fileID: 470729005}
 --- !u!1 &980750078 stripped
@@ -39554,6 +39558,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1128822637}
     - target: {fileID: 1156019645, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: range
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156019645, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: damage
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156019645, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: fireSfx
       value: 
       objectReference: {fileID: 8300000, guid: a764377339b869e459f5e53fb9258f73, type: 3}
@@ -39582,12 +39594,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 5fe71794958af0c4e8238336c5fd0994, type: 3}
     - target: {fileID: 1660585246, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660585246, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: allowButtonHold
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1660585246, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: timeBetweenShooting
-      value: 1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1712323152, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: text
@@ -45904,7 +45920,7 @@ MonoBehaviour:
   finished: 0
   waves:
   - enemy: {fileID: 8351005599831475708, guid: c1caefbea08186c498798a37b3c6a3e3, type: 3}
-    count: 5
+    count: 3
     rate: 1
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 2
@@ -65761,7 +65777,7 @@ MonoBehaviour:
   finished: 0
   waves:
   - enemy: {fileID: 6986847328652947792, guid: fcbd119764ab42502885ee999b386018, type: 3}
-    count: 20
+    count: 1
     rate: 5
   - enemy: {fileID: 8351005599831475708, guid: a2ec7ca1a1e98ba4c8ad28f03e070beb, type: 3}
     count: 2
@@ -77547,6 +77563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1058453802802379646, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
+    - {fileID: 7201606769391505878, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5470625e37521526b6fa21813af6ed9, type: 3}
 --- !u!1001 &8744569632572705019
 PrefabInstance:
