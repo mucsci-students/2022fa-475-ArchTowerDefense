@@ -8,11 +8,13 @@ public class BuyGunMenu : MonoBehaviour
     public UnityStandardAssets.Characters.FirstPerson.FirstPersonController player;
     public GameObject GunMenu;
     private Transform WeaponHolder;
+    private Currency moneyBag;
 
     private int activeGun = 0;
     void Start()
     {
         WeaponHolder = player.transform.GetChild(0).GetChild(0);
+        moneyBag = WeaponHolder.transform.parent.parent.GetComponent<Currency>();
     }
 
     // Update is called once per frame
@@ -60,8 +62,9 @@ public class BuyGunMenu : MonoBehaviour
 
     public void BuyAR()
     {
-        if (activeGun != 1)
+        if (activeGun != 1 && moneyBag.shekels >= 2500)
         {
+            moneyBag.purchase(2500);
             WeaponHolder.GetChild(activeGun).gameObject.SetActive(false);
             WeaponHolder.GetChild(1).gameObject.SetActive(true);
             GunMenu.gameObject.SetActive(false);
@@ -71,8 +74,9 @@ public class BuyGunMenu : MonoBehaviour
 
     public void BuySMG()
     {
-        if (activeGun != 2)
+        if (activeGun != 2 && moneyBag.shekels >= 1000)
         {
+            moneyBag.purchase(1000);
             WeaponHolder.GetChild(activeGun).gameObject.SetActive(false);
             WeaponHolder.GetChild(2).gameObject.SetActive(true);
             GunMenu.gameObject.SetActive(false);
@@ -82,8 +86,9 @@ public class BuyGunMenu : MonoBehaviour
 
     public void BuyProcrastinator()
     {
-        if (activeGun != 3)
+        if (activeGun != 3 && moneyBag.shekels >= 3000)
         {
+            moneyBag.purchase(3000);
             WeaponHolder.GetChild(activeGun).gameObject.SetActive(false);
             WeaponHolder.GetChild(3).gameObject.SetActive(true);
             GunMenu.gameObject.SetActive(false);
@@ -93,8 +98,9 @@ public class BuyGunMenu : MonoBehaviour
 
     public void BuyAK()
     {
-        if (activeGun != 4)
+        if (activeGun != 4 && moneyBag.shekels >= 2500)
         {
+            moneyBag.purchase(2500);
             WeaponHolder.GetChild(activeGun).gameObject.SetActive(false);
             WeaponHolder.GetChild(4).gameObject.SetActive(true);
             GunMenu.gameObject.SetActive(false);

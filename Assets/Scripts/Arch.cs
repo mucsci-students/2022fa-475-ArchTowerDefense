@@ -5,7 +5,7 @@ using System.Collections;
 public class Arch : MonoBehaviour
 {
     [HideInInspector]
-    public float startHealth = 100;
+    public float startHealth = 10;
     [Header("Health")]
     private float health;
     public GameObject healthBar;
