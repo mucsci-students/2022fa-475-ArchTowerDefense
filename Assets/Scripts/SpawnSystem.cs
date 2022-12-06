@@ -24,7 +24,6 @@ public class SpawnSystem : MonoBehaviour
     {
         foreach(Transform spawn in transform)
         {
-            Debug.Log(spawn.GetComponent<WaveSpawner>().finished);
             if (!spawn.GetComponent<WaveSpawner>().finished)
                 return;
         }
