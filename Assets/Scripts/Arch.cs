@@ -12,6 +12,9 @@ public class Arch : MonoBehaviour
 
     [Header("Statuses")]
     private bool isDead = false;
+
+    public AudioClip protectLogo;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -25,6 +25,26 @@ public class Zoppetti : MonoBehaviour
     private float fireCountdown = 0f;
     public GameObject bulletPrefab;
 
+    [Header("Sound")]
+    public AudioClip[] callNames;
+    public AudioClip lastClip;
+    public AudioSource audioSource;
+
+
+
+    AudioClip RandomClip()
+    {
+        int attempts = 3;
+        AudioClip newClip = callNames[Random.Range(0, callNames.Length)];
+        while (newClip == lastClip && attempts > 0)
+        {
+            newClip = callNames[Random.Range(0, callNames.Length)];
+            attempts--;
+        }
+        lastClip = newClip;
+        return newClip;
+    }
+
 
     // [Header("References")]
     // Start is called before the first frame update
@@ -33,6 +53,7 @@ public class Zoppetti : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+
     }
 
     void UpdateTarget()
@@ -75,6 +96,8 @@ public class Zoppetti : MonoBehaviour
         {
             Debug.Log("Respec");
             agent.destination = player.position;
+
+            audioSource.PlayOneShot(RandomClip());
           
             gameObject.GetComponent<Animator>().Play("Zoop.Run");
             
@@ -92,6 +115,7 @@ public class Zoppetti : MonoBehaviour
             fireCountdown = 1f / fireRate;
         }
         fireCountdown -= Time.deltaTime;
+
     }
 
     void Shoot(Transform firePoint)
