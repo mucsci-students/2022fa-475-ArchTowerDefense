@@ -28,3 +28,8 @@ Completed in 3 weeks for the Millersville University CSCI 475 course, Fall 2022.
 - [Samantha Noggle](https://github.com/astruxie)
 
 ## Assets Used
+- [FREE Skybox Extended Shader](https://assetstore.unity.com/packages/vfx/shaders/free-skybox-extended-shader-107400)
+- [Lewis | Lowpoly Character](https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lewis-lowpoly-character-148022)
+- [Low Poly Guns Asset](https://assetstore.unity.com/packages/3d/props/guns/low-poly-guns-asset-105979)
+- [POLYGON Particle FX - Low Poly 3D Art by Synty](https://assetstore.unity.com/packages/vfx/particles/polygon-particle-fx-low-poly-3d-art-by-synty-168372)
+- [Zombie | LOWPOLY CHARACTER](https://assetstore.unity.com/packages/3d/characters/zombie-lowpoly-character-118663)
