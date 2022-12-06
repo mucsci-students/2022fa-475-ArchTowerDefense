@@ -14,7 +14,7 @@ Completed in 3 weeks for the Millersville University CSCI 475 course, Fall 2022.
 
 
 ### Mac:
-1. [Download the .zip file]()
+1. [Download the .zip file](https://drive.google.com/file/d/1yV5oeInWsclHZyZh1bhiYwUvtS270SYD/view?usp=sharing)
 2. Unzip it, either in finder or by navigating to the folder you downloaded it with the terminal: ```unzip ArchTD_Mac.zip```
 3. If you haven't already, open a terminal session and navigate to the folder where you downloaded it. Run this command to set the executable permissions: ```chmod a+x ArchTD_Mac.app/Contents/MacOS/* ```
 3. Double click to try and open. Mac will give you a security error.
