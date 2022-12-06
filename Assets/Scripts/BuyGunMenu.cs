@@ -9,10 +9,15 @@ public class BuyGunMenu : MonoBehaviour
     public GameObject GunMenu;
     private Transform WeaponHolder;
     private Currency moneyBag;
+    private GameObject spawnSystem;
+    private SpawnSystem ss;
 
     private int activeGun = 0;
     void Start()
     {
+        spawnSystem = GameObject.Find("SpawnSystem");
+        ss = spawnSystem.GetComponent<SpawnSystem>();
+        
         WeaponHolder = player.transform.GetChild(0).GetChild(0);
         moneyBag = WeaponHolder.transform.parent.parent.GetComponent<Currency>();
     }
@@ -24,7 +29,7 @@ public class BuyGunMenu : MonoBehaviour
 
         // ALSO CHECK WE R IN BUILD PHASE
         // Open the menu to buy
-        if (Input.GetKeyDown(KeyCode.G) && !player.m_MouseLook.inMenu)
+        if (Input.GetKeyDown(KeyCode.G) && !player.m_MouseLook.inMenu && ss.inBuildPeriod)
         {
             Debug.Log(player.m_MouseLook.inMenu);
             GunMenu.gameObject.SetActive(true);

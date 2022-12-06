@@ -11,7 +11,10 @@ public class SpawnSystem : MonoBehaviour
 
 	public TMP_Text waveCountdownText;
     public TMP_Text skipBuildText;
+    public TMP_Text gunPrompt;
 	public GameManager gameManager;
+
+    public bool inBuildPeriod = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +35,10 @@ public class SpawnSystem : MonoBehaviour
 
 		if (countdown <= 0f)
 		{
+            inBuildPeriod = false;
             waveCountdownText.enabled = false;
             skipBuildText.enabled = false;
+            gunPrompt.enabled = false;
             foreach(Transform spawn in transform)
             {
 			    StartCoroutine(spawn.GetComponent<WaveSpawner>().SpawnWave());
@@ -52,8 +57,10 @@ public class SpawnSystem : MonoBehaviour
 		countdown -= Time.deltaTime;
 		countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
         
+        inBuildPeriod = true;
         waveCountdownText.enabled = true;
         skipBuildText.enabled = true;
+        gunPrompt.enabled = true;
         waveCountdownText.text = "NEXT WAVE: " + string.Format("{0:0}", countdown);
 
     }
