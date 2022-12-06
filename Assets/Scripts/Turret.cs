@@ -55,6 +55,7 @@ public class Turret : MonoBehaviour {
     public GameObject nextStage;
     public float turnSpeed = 10f;
 	public Transform firePoint;
+	private bool audioPlaying = false;
 
 	// Use this for initialization
 	void Start () {
@@ -84,10 +85,12 @@ public class Turret : MonoBehaviour {
         RaycastHit hit;
 		foreach (GameObject enemy in enemies)
 		{
-			float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+			float distanceToEnemy = Vector3.Distance(transform.position, new Vector3(enemy.transform.position.x,
+				enemy.transform.position.y, enemy.transform.position.z));
 			if (distanceToEnemy < shortestDistance)
 			{
-                if (Physics.Linecast(firePoint.transform.position, enemy.transform.position, out hit)) {
+                if (Physics.Linecast(firePoint.transform.position, new Vector3(enemy.transform.position.x,
+					enemy.transform.position.y + 3, enemy.transform.position.z), out hit)) {
                     if (hit.transform.CompareTag("Ground"))
                     {
                         continue;
@@ -133,12 +136,21 @@ public class Turret : MonoBehaviour {
             	DecreaseBarrelSpeed();
 			}
 
-			GetComponent<AudioSource>().Stop();
+			if (audioPlaying)
+			{
+				audioPlaying = false;
+				GetComponent<AudioSource>().Stop();
+			}
 			return;
 		}
 
 		LockOnTarget();
-		GetComponent<AudioSource>().Play();
+
+		if (!audioPlaying)
+		{
+			audioPlaying = true;
+			GetComponent<AudioSource>().Play();
+		}
 
 		if (useFire)
 		{

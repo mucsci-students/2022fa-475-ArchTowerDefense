@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour {
 			return;
 		}
 
-		Vector3 dir = target.position - transform.position;
+		Vector3 dir = new Vector3(target.position.x, target.position.y + 3, target.position.z) - transform.position;
 		float distanceThisFrame = speed * Time.deltaTime;
 
 		if (dir.magnitude <= distanceThisFrame)
@@ -41,7 +41,8 @@ public class Bullet : MonoBehaviour {
 
 	void HitTarget ()
 	{
-		GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
+		GameObject effectIns = Instantiate(impactEffect, new Vector3(target.position.x, target.position.y + 3,
+			target.position.z), transform.rotation);
 		effectIns.transform.SetParent(target);
 		Destroy(effectIns, 5f);
 
